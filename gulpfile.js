@@ -48,7 +48,7 @@ const lintBase = files => {
     .pipe($.eslint({ fix: true }))
     .pipe(server.reload({stream: true, once: true}))
     .pipe($.eslint.format())
-    .pipe($.if(!server.active, $.eslint.failAfterError()));
+    // .pipe($.if(!server.active, $.eslint.failAfterError()));
 }
 function lint() {
   return lintBase('app/scripts/**/*.js')
