@@ -4,13 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>generator webapp</title>
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
     <!-- build:css styles/core.css -->
-    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap3/dist/css/bootstrap.min.css" type="text/css" />
     <!-- endbuild -->
+
+    <!--[if lte IE 8]>
+      <script src="scripts/ie-fix/html5shiv.js"></script>
+    <![endif]-->
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -22,56 +31,82 @@
 
 <body>
     <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+      <p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="https://browsehappy.com/?locale=ru">обновите его</a> для корректного отображения сайта.</p>
     <![endif]-->
 
-    <div class="container">
-        <div class="header">
-            <ul class="nav nav-pills float-right">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">About</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <h3 class="text-muted">generator webapp</h3>
+    <!--
+        1. Почему у телефона в хедере синяя стрелочка вниз справа. Ссылка должна куда-то физически скроллить, что-то должно выпадать?
+        18.02 Затратил: 1,5 часа. Разметка хедера, предусмотрительная установка базовых библиотек и скриптов.
+    -->
+
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-default navigation" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-navbar-collapse">
+                        <span class="sr-only">Открыть меню</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/"><img src="images/logo.png" class="img-responsive"
+                            alt="Логотип"></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navigation__content" id="bs-navbar-collapse">
+                    <ul class="nav navbar-nav navigation__list">
+                        <li class="active"><a href="#">Каталог</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li class="navigation__phone">
+                            <a class="phone-link" href="#">8-800-700-70-80</a>
+                            <span class="phone-hint">Звонок бесплатный по РФ</span>
+                        </li>
+                        <li class="navigation__largebtn">
+                            <a class="nav-link" href="#">Заказать</a>
+                        </li>
+                        <!-- <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Действие</a></li>
+                                <li><a href="#">Другое действие</a></li>
+                                <li><a href="#">Что-то еще</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Отдельная ссылка</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#">Еще одна отдельная ссылка</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+            </nav>
+
         </div>
+    </header>
 
-        <div class="jumbotron">
-            <h1 class="display-3">'Allo, 'Allo!</h1>
-            <p class="lead">Always a pleasure scaffolding your apps.</p>
-            <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
-        </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="footer-menu">
+                        <li><a href="#">Каталог</a></li>
+                        <li><a href="#">О компании</a></li>
+                        <li><a href="#">Производство</a></li>
+                        <li><a href="#">Акции</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
 
-        <div class="row marketing">
-            <div class="col-lg-6">
-                <h4>HTML5 Boilerplate</h4>
-                <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web
-                    apps or
-                    sites.</p>
-
-                <h4>Sass</h4>
-                <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
-                </p>
-
-                <h4>Bootstrap</h4>
-                <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web
-                    development.</p>
-
-                <h4>Modernizr</h4>
-                <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and
-                    CSS3-powered websites.</p>
+                </div>
             </div>
         </div>
-
-        <div class="footer">
-            <p>♥ from the Yeoman team</p>
-        </div>
-    </div>
+    </footer>
 
     <!-- build:js scripts/vendor.js -->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
