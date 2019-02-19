@@ -26,7 +26,7 @@ function styles() {
       includePaths: ['.']
     }).on('error', $.sass.logError))
     .pipe($.postcss([
-      autoprefixer()
+      autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9')
     ]))
     .pipe($.if(!isProd, $.sourcemaps.write()))
     .pipe(dest('.tmp/styles'))
