@@ -1,9 +1,27 @@
-console.log("'Allo 'Allo!");
+$(document).ready(function () {
+    $('main').each(function () {
+        $(this).hide()
+        $('#specials').show();
+    });
 
-// Uncomment to enable Bootstrap tooltips
-// https://getbootstrap.com/docs/4.0/components/tooltips/#example-enable-tooltips-everywhere
-// $(function () { $('[data-toggle="tooltip"]').tooltip(); });
+    $('.navigation__list-item').each(function () {
+        if ($(this).hasClass('active')) {
+            var neededId = $(this).attr('href');
+            $('#' + neededId).show();
+        }
+    });
 
-// Uncomment to enable Bootstrap popovers
-// https://getbootstrap.com/docs/4.0/components/popovers/#example-enable-popovers-everywhere
-// $(function () { $('[data-toggle="popover"]').popover(); });
+    $('.navigation__list-item a').click(function (e) {
+        e.preventDefault();
+        var neededId = $(this).attr('href');
+        $('main').each(function () {
+            $(this).hide()
+        });
+
+        $('#' + neededId).show();
+        $('.navigation__list-item').each(function () {
+            $(this).removeClass('active');
+        });
+        $(this).parent().addClass('active');
+    });
+});

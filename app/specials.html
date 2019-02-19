@@ -36,10 +36,8 @@
 
     <!--
         1. Почему у телефона в хедере синяя стрелочка вниз справа. Ссылка должна куда-то физически скроллить, что-то должно выпадать?
-        2. Каталог ведь будет выпадающий многоуровневый?
-
         18.02 Затратил: 1,5 часа. Разметка хедера, предусмотрительная установка базовых библиотек и скриптов.
-        19.02 затратил 3 часа
+        19.02 затратил 1 час
     -->
 
     <header class="header">
@@ -61,11 +59,10 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navigation__content" id="bs-navbar-collapse">
                     <ul class="nav navbar-nav navigation__list">
-                        <li class="navigation__list-item active"><a href="main-page">Главная </a></li>
-                        <li class="navigation__list-item"><a href="catalog">Каталог</a></li>
-                        <li class="navigation__list-item"><a href="about">О компании</a></li>
-                        <li class="navigation__list-item"><a href="specials">Акции</a></li>
-                        <li class="navigation__list-item"><a href="contacts">Контакты</a></li>
+                        <li class="navigation__list-item active"><a href="#">Каталог</a></li>
+                        <li class="navigation__list-item"><a href="#">О компании</a></li>
+                        <li class="navigation__list-item"><a href="#">Акции</a></li>
+                        <li class="navigation__list-item"><a href="#">Контакты</a></li>
                         <li class="navigation__phone">
                             <a class="phone-link" href="tel:+78007007080">8-800-700-70-80</a>
                             <span class="phone-hint">Звонок бесплатный по РФ</span>
@@ -92,102 +89,10 @@
         </div>
     </header>
 
-    <main class="main-content" id="main-page">
-        <div class="main-content__image">
+    <main class="section-content">
+        <div class="section-content__image">
             <div class="container">
-                <h1 class="main-content__title">ПРОИЗВОДСТВО ПОЛИЭТИЛЕНОВЫХ ТРУБ</h1>
-                <p class="main-content__info">ДЛЯ ВОДОСНАБЖЕНИЯ, ГАЗОСНАБЖЕНИЯ И КАНАЛИЗАЦИИ</p>
-                <div class="main-content__styling-line">
-                    <p class="main-content__text">Наше производственное предприятие специализируется на производстве
-                        полиэтиленовых труб всех типов и размеров. Изготавливаем трубы нестандартных размеров</p>
-                </div>
-            </div>
-        </div>
-    </main>
 
-    <main class="section-content" id="specials">
-        <div class="section-top">
-            <div class="container">
-                <h1 class="section-top__title">акции</h1>
-                <p class="section-top__text"></p>
-            </div>
-        </div>
-
-        <div class="specials">
-            <div class="container">
-                <div class="row">
-                    <article class="item-card">
-                        <a href="" class="item-card__link"></a>
-                        <div class="item-card__img-wrap">
-                            <img src="images/items/item1.png" alt="item1">
-                        </div>
-                        <h2 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
-                        </h2>
-                    </article>
-                    <article class="item-card">
-                        <a href="" class="item-card__link"></a>
-                        <div class="item-card__img-wrap">
-                            <img src="images/items/item2.png" alt="item1">
-                        </div>
-                        <h2 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
-                        </h2>
-                    </article>
-                    <article class="item-card">
-                        <a href="" class="item-card__link"></a>
-                        <div class="item-card__img-wrap">
-                            <img src="images/items/item3.png" alt="item1">
-                        </div>
-                        <h2 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
-                        </h2>
-                    </article>
-                    <article class="item-card">
-                        <a href="" class="item-card__link"></a>
-                        <div class="item-card__img-wrap">
-                            <img src="images/items/item4.png" alt="item1">
-                        </div>
-                        <h2 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
-                        </h2>
-                    </article>
-                    <article class="item-card">
-                        <a href="" class="item-card__link"></a>
-                        <div class="item-card__img-wrap">
-                            <img src="images/items/item5.png" alt="item1">
-                        </div>
-                        <h2 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
-                        </h2>
-                    </article>
-                    <article class="item-card">
-                        <a href="" class="item-card__link"></a>
-                        <div class="item-card__img-wrap">
-                            <img src="images/items/item6.png" alt="item1">
-                        </div>
-                        <h2 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
-                        </h2>
-                    </article>
-                </div>
-            </div>
-        </div>
-
-        <div class="red-form">
-            <div class="container">
-                <h3 class="red-form__title">ПОЛУЧИТЬ СКИДКУ ДО 30%</h3>
-                Оформите заказ в первый день обращения и получите гарантированную скидку!</p>
-                <form action="" class="inl-form">
-                    <input type="text" placeholder="ИМЯ" class="inl-form__input">
-                    <input type="text" placeholder="ТЕЛЕФОН" class="inl-form__input">
-                    <button class="blue-btn inl-form__sendbtn">ОТПРАВИТЬ</button>
-                </form>
-                <label>
-                    <input type="checkbox">
-                    <p class="red-form__hint">ЗАПОЛНЯЯ ФОРМУ, ВЫ ДАЙЕТЕ СВОЕ СОГЛАСИЕ НА ИСПОЛЬЗОВАНИЕ И ОБРАБОТКУ
-                        ПЕРСОНАЛЬНЫХ ДАННЫХ</p>
-                </label>
             </div>
         </div>
     </main>

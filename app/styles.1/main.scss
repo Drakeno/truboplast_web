@@ -70,17 +70,11 @@ body {
                 border-bottom: 4px solid transparent;
                 transition: .1s all;
                 &:hover {
-                    background: $white;
                     color: $dark !important;
                     border-color: $lightblue;
                 }
             }
             &.active>a {
-                &:hover {
-                    background: $white;
-                }
-
-                background: $white;
                 border-color: $blue;
             }
         }
@@ -158,12 +152,6 @@ body {
         z-index: 1;
         font-size: 18px;
     }
-}
-
-/* section-content */
-
-.section-content {
-    
 }
 
 /* footer */

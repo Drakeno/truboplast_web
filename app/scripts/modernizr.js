@@ -20,18 +20,11 @@
  * a global `Modernizr` object, and as classes on the `<html>` element. This
  * information allows you to progressively enhance your pages with a granular level
  * of control over the experience.
-<<<<<<< HEAD
- */
-
-(function(window, document, undefined) {
-  var tests = [];
-=======
 */
 
 ;(function(window, document, undefined){
   var tests = [];
   
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    *
@@ -43,26 +36,15 @@
 
   var ModernizrProto = {
     // The current version, dummy
-<<<<<<< HEAD
     _version: "3.6.0",
-=======
-    _version: '3.6.0',
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
     // Any settings that don't work as separate modules
     // can go in here as configuration.
     _config: {
-<<<<<<< HEAD
       classPrefix: "modernizr-",
       enableClasses: true,
       enableJSClass: true,
       usePrefixes: true
-=======
-      'classPrefix': "modernizr-",
-      'enableClasses': true,
-      'enableJSClass': true,
-      'usePrefixes': true
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
     },
 
     // Queue of tests
@@ -83,7 +65,6 @@
     },
 
     addTest: function(name, fn, options) {
-<<<<<<< HEAD
       tests.push({ name: name, fn: fn, options: options });
     },
 
@@ -92,18 +73,6 @@
     }
   };
 
-=======
-      tests.push({name: name, fn: fn, options: options});
-    },
-
-    addAsyncTest: function(fn) {
-      tests.push({name: null, fn: fn});
-    }
-  };
-
-  
-
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   // Fake some of Object.create so we can force non test results to be non "own" properties.
   var Modernizr = function() {};
   Modernizr.prototype = ModernizrProto;
@@ -112,14 +81,7 @@
   // Overwrite name so constructor name is nicer :D
   Modernizr = new Modernizr();
 
-<<<<<<< HEAD
   var classes = [];
-=======
-  
-
-  var classes = [];
-  
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    * is returns a boolean if the typeof an obj is exactly type.
@@ -134,11 +96,8 @@
   function is(obj, type) {
     return typeof obj === type;
   }
-<<<<<<< HEAD
-=======
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * Run through all tests and detect their support in the current UA.
    *
@@ -168,38 +127,17 @@
         if (feature.name) {
           featureNames.push(feature.name.toLowerCase());
 
-<<<<<<< HEAD
-          if (
-            feature.options &&
-            feature.options.aliases &&
-            feature.options.aliases.length
-          ) {
-            // Add all the aliases into the names list
-            for (
-              aliasIdx = 0;
-              aliasIdx < feature.options.aliases.length;
-              aliasIdx++
-            ) {
-              featureNames.push(
-                feature.options.aliases[aliasIdx].toLowerCase()
-              );
-=======
           if (feature.options && feature.options.aliases && feature.options.aliases.length) {
             // Add all the aliases into the names list
             for (aliasIdx = 0; aliasIdx < feature.options.aliases.length; aliasIdx++) {
               featureNames.push(feature.options.aliases[aliasIdx].toLowerCase());
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
             }
           }
         }
 
         // Run the test, or use the raw value if it's not a function
-<<<<<<< HEAD
-        result = is(feature.fn, "function") ? feature.fn() : feature.fn;
-=======
         result = is(feature.fn, 'function') ? feature.fn() : feature.fn;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
         // Set each of the names on the Modernizr object
         for (nameIdx = 0; nameIdx < featureNames.length; nameIdx++) {
@@ -210,47 +148,26 @@
           //
           // Cap it to TWO to make the logic simple and because who needs that kind of subtesting
           // hashtag famous last words
-<<<<<<< HEAD
-          featureNameSplit = featureName.split(".");
-=======
           featureNameSplit = featureName.split('.');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
           if (featureNameSplit.length === 1) {
             Modernizr[featureNameSplit[0]] = result;
           } else {
             // cast to a Boolean, if not one already
-<<<<<<< HEAD
-            if (
-              Modernizr[featureNameSplit[0]] &&
-              !(Modernizr[featureNameSplit[0]] instanceof Boolean)
-            ) {
-              Modernizr[featureNameSplit[0]] = new Boolean(
-                Modernizr[featureNameSplit[0]]
-              );
-=======
             if (Modernizr[featureNameSplit[0]] && !(Modernizr[featureNameSplit[0]] instanceof Boolean)) {
               Modernizr[featureNameSplit[0]] = new Boolean(Modernizr[featureNameSplit[0]]);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
             }
 
             Modernizr[featureNameSplit[0]][featureNameSplit[1]] = result;
           }
 
-<<<<<<< HEAD
-          classes.push((result ? "" : "no-") + featureNameSplit.join("-"));
-=======
           classes.push((result ? '' : 'no-') + featureNameSplit.join('-'));
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         }
       }
     }
   }
-<<<<<<< HEAD
-=======
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * docElement is a convenience wrapper to grab the root element of the document
    *
@@ -259,10 +176,7 @@
    */
 
   var docElement = document.documentElement;
-<<<<<<< HEAD
-=======
   
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    * A convenience helper to check if the document we are running in is an SVG document
@@ -271,12 +185,8 @@
    * @returns {boolean}
    */
 
-<<<<<<< HEAD
-  var isSVG = docElement.nodeName.toLowerCase() === "svg";
-=======
   var isSVG = docElement.nodeName.toLowerCase() === 'svg';
   
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    * setClasses takes an array of class names and adds them to the root element
@@ -290,11 +200,7 @@
   //  ['no-webp', 'borderradius', ...]
   function setClasses(classes) {
     var className = docElement.className;
-<<<<<<< HEAD
-    var classPrefix = Modernizr._config.classPrefix || "";
-=======
     var classPrefix = Modernizr._config.classPrefix || '';
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
     if (isSVG) {
       className = className.baseVal;
@@ -303,38 +209,24 @@
     // Change `no-js` to `js` (independently of the `enableClasses` option)
     // Handle classPrefix on this too
     if (Modernizr._config.enableJSClass) {
-<<<<<<< HEAD
-      var reJS = new RegExp("(^|\\s)" + classPrefix + "no-js(\\s|$)");
-      className = className.replace(reJS, "$1" + classPrefix + "js$2");
-=======
       var reJS = new RegExp('(^|\\s)' + classPrefix + 'no-js(\\s|$)');
       className = className.replace(reJS, '$1' + classPrefix + 'js$2');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
     }
 
     if (Modernizr._config.enableClasses) {
       // Add the new classes
-<<<<<<< HEAD
-      className += " " + classPrefix + classes.join(" " + classPrefix);
-=======
       className += ' ' + classPrefix + classes.join(' ' + classPrefix);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       if (isSVG) {
         docElement.className.baseVal = className;
       } else {
         docElement.className = className;
       }
     }
-<<<<<<< HEAD
-  }
-
-=======
 
   }
 
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * hasOwnProp is a shim for hasOwnProperty that is needed for Safari 2.0 support
    *
@@ -350,26 +242,6 @@
   var hasOwnProp;
 
   (function() {
-<<<<<<< HEAD
-    var _hasOwnProperty = {}.hasOwnProperty;
-    /* istanbul ignore else */
-    /* we have no way of testing IE 5.5 or safari 2,
-     * so just assume the else gets hit */
-    if (
-      !is(_hasOwnProperty, "undefined") &&
-      !is(_hasOwnProperty.call, "undefined")
-    ) {
-      hasOwnProp = function(object, property) {
-        return _hasOwnProperty.call(object, property);
-      };
-    } else {
-      hasOwnProp = function(object, property) {
-        /* yes, this can give false positives/negatives, but most of the time we don't care about those */
-        return (
-          property in object &&
-          is(object.constructor.prototype[property], "undefined")
-        );
-=======
     var _hasOwnProperty = ({}).hasOwnProperty;
     /* istanbul ignore else */
     /* we have no way of testing IE 5.5 or safari 2,
@@ -382,19 +254,14 @@
     else {
       hasOwnProp = function(object, property) { /* yes, this can give false positives/negatives, but most of the time we don't care about those */
         return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       };
     }
   })();
 
-<<<<<<< HEAD
-  // _l tracks listeners for async tests, as well as tests that execute after the initial run
-=======
   
 
 
    // _l tracks listeners for async tests, as well as tests that execute after the initial run
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   ModernizrProto._l = {};
 
   /**
@@ -542,17 +409,6 @@
    */
 
   function addTest(feature, test) {
-<<<<<<< HEAD
-    if (typeof feature == "object") {
-      for (var key in feature) {
-        if (hasOwnProp(feature, key)) {
-          addTest(key, feature[key]);
-        }
-      }
-    } else {
-      feature = feature.toLowerCase();
-      var featureNameSplit = feature.split(".");
-=======
 
     if (typeof feature == 'object') {
       for (var key in feature) {
@@ -564,7 +420,6 @@
 
       feature = feature.toLowerCase();
       var featureNameSplit = feature.split('.');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       var last = Modernizr[featureNameSplit[0]];
 
       // Again, we don't check for parent test existence. Get that right, though.
@@ -572,11 +427,7 @@
         last = last[featureNameSplit[1]];
       }
 
-<<<<<<< HEAD
-      if (typeof last != "undefined") {
-=======
       if (typeof last != 'undefined') {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         // we're going to quit if you're trying to overwrite an existing test
         // if we were to allow it, we'd do this:
         //   var re = new RegExp("\\b(no-)?" + feature + "\\b");
@@ -585,42 +436,22 @@
         return Modernizr;
       }
 
-<<<<<<< HEAD
-      test = typeof test == "function" ? test() : test;
-=======
       test = typeof test == 'function' ? test() : test;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
       // Set the value (this is the magic, right here).
       if (featureNameSplit.length == 1) {
         Modernizr[featureNameSplit[0]] = test;
       } else {
         // cast to a Boolean, if not one already
-<<<<<<< HEAD
-        if (
-          Modernizr[featureNameSplit[0]] &&
-          !(Modernizr[featureNameSplit[0]] instanceof Boolean)
-        ) {
-          Modernizr[featureNameSplit[0]] = new Boolean(
-            Modernizr[featureNameSplit[0]]
-          );
-=======
         if (Modernizr[featureNameSplit[0]] && !(Modernizr[featureNameSplit[0]] instanceof Boolean)) {
           Modernizr[featureNameSplit[0]] = new Boolean(Modernizr[featureNameSplit[0]]);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         }
 
         Modernizr[featureNameSplit[0]][featureNameSplit[1]] = test;
       }
 
       // Set a single class (either `feature` or `no-feature`)
-<<<<<<< HEAD
-      setClasses([
-        (!!test && test != false ? "" : "no-") + featureNameSplit.join("-")
-      ]);
-=======
       setClasses([(!!test && test != false ? '' : 'no-') + featureNameSplit.join('-')]);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
       // Trigger the event
       Modernizr._trigger(feature, test);
@@ -634,12 +465,9 @@
     ModernizrProto.addTest = addTest;
   });
 
-<<<<<<< HEAD
-=======
   
 
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * If the browsers follow the spec, then they would expose vendor-specific styles as:
    *   elem.style.WebkitBorderRadius
@@ -656,21 +484,12 @@
    * @returns {string} The string representing the vendor-specific style properties
    */
 
-<<<<<<< HEAD
-  var omPrefixes = "Moz O ms Webkit";
-
-  var cssomPrefixes = ModernizrProto._config.usePrefixes
-    ? omPrefixes.split(" ")
-    : [];
-  ModernizrProto._cssomPrefixes = cssomPrefixes;
-=======
   var omPrefixes = 'Moz O ms Webkit';
   
 
   var cssomPrefixes = (ModernizrProto._config.usePrefixes ? omPrefixes.split(' ') : []);
   ModernizrProto._cssomPrefixes = cssomPrefixes;
   
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    * atRule returns a given CSS property at-rule (eg @keyframes), possibly in
@@ -704,11 +523,7 @@
     var cssrule = window.CSSRule;
     var rule;
 
-<<<<<<< HEAD
-    if (typeof cssrule === "undefined") {
-=======
     if (typeof cssrule === 'undefined') {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       return undefined;
     }
 
@@ -717,15 +532,6 @@
     }
 
     // remove literal @ from beginning of provided property
-<<<<<<< HEAD
-    prop = prop.replace(/^@/, "");
-
-    // CSSRules use underscores instead of dashes
-    rule = prop.replace(/-/g, "_").toUpperCase() + "_RULE";
-
-    if (rule in cssrule) {
-      return "@" + prop;
-=======
     prop = prop.replace(/^@/, '');
 
     // CSSRules use underscores instead of dashes
@@ -733,23 +539,15 @@
 
     if (rule in cssrule) {
       return '@' + prop;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
     }
 
     for (var i = 0; i < length; i++) {
       // prefixes gives us something like -o-, and we want O_
       var prefix = prefixes[i];
-<<<<<<< HEAD
-      var thisRule = prefix.toUpperCase() + "_" + rule;
-
-      if (thisRule in cssrule) {
-        return "@-" + prefix.toLowerCase() + "-" + prop;
-=======
       var thisRule = prefix.toUpperCase() + '_' + rule;
 
       if (thisRule in cssrule) {
         return '@-' + prefix.toLowerCase() + '-' + prop;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       }
     }
 
@@ -758,11 +556,8 @@
 
   ModernizrProto.atRule = atRule;
 
-<<<<<<< HEAD
-=======
   
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * List of JavaScript DOM values used for tests
    *
@@ -781,16 +576,9 @@
    * ```
    */
 
-<<<<<<< HEAD
-  var domPrefixes = ModernizrProto._config.usePrefixes
-    ? omPrefixes.toLowerCase().split(" ")
-    : [];
-  ModernizrProto._domPrefixes = domPrefixes;
-=======
   var domPrefixes = (ModernizrProto._config.usePrefixes ? omPrefixes.toLowerCase().split(' ') : []);
   ModernizrProto._domPrefixes = domPrefixes;
   
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    * createElement is a convenience wrapper around document.createElement. Since we
@@ -804,34 +592,19 @@
    */
 
   function createElement() {
-<<<<<<< HEAD
-    if (typeof document.createElement !== "function") {
-=======
     if (typeof document.createElement !== 'function') {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       // This is the case in IE7, where the type of createElement is "object".
       // For this reason, we cannot call apply() as Object is not a Function.
       return document.createElement(arguments[0]);
     } else if (isSVG) {
-<<<<<<< HEAD
-      return document.createElementNS.call(
-        document,
-        "http://www.w3.org/2000/svg",
-        arguments[0]
-      );
-=======
       return document.createElementNS.call(document, 'http://www.w3.org/2000/svg', arguments[0]);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
     } else {
       return document.createElement.apply(document, arguments);
     }
   }
 
-<<<<<<< HEAD
-=======
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * Modernizr.hasEvent() detects support for a given event
    *
@@ -862,19 +635,6 @@
    */
 
   var hasEvent = (function() {
-<<<<<<< HEAD
-    // Detect whether event support can be detected via `in`. Test on a DOM element
-    // using the "blur" event b/c it should always exist. bit.ly/event-detection
-    var needsFallback = !("onblur" in document.documentElement);
-
-    function inner(eventName, element) {
-      var isSupported;
-      if (!eventName) {
-        return false;
-      }
-      if (!element || typeof element === "string") {
-        element = createElement(element || "div");
-=======
 
     // Detect whether event support can be detected via `in`. Test on a DOM element
     // using the "blur" event b/c it should always exist. bit.ly/event-detection
@@ -886,17 +646,12 @@
       if (!eventName) { return false; }
       if (!element || typeof element === 'string') {
         element = createElement(element || 'div');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       }
 
       // Testing via the `in` operator is sufficient for modern browsers and IE.
       // When using `setAttribute`, IE skips "unload", WebKit skips "unload" and
       // "resize", whereas `in` "catches" those.
-<<<<<<< HEAD
-      eventName = "on" + eventName;
-=======
       eventName = 'on' + eventName;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       isSupported = eventName in element;
 
       // Fallback technique for old Firefox - bit.ly/event-detection
@@ -904,19 +659,11 @@
         if (!element.setAttribute) {
           // Switch to generic element if it lacks `setAttribute`.
           // It could be the `document`, `window`, or something else.
-<<<<<<< HEAD
-          element = createElement("div");
-        }
-
-        element.setAttribute(eventName, "");
-        isSupported = typeof element[eventName] === "function";
-=======
           element = createElement('div');
         }
 
         element.setAttribute(eventName, '');
         isSupported = typeof element[eventName] === 'function';
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
         if (element[eventName] !== undefined) {
           // If property was created, "remove it" by setting value to `undefined`.
@@ -930,14 +677,6 @@
     return inner;
   })();
 
-<<<<<<< HEAD
-  ModernizrProto.hasEvent = hasEvent;
-
-  /**
-   * @optionName html5printshiv
-   * @optionProp html5printshiv
-   */
-=======
 
   ModernizrProto.hasEvent = hasEvent;
   
@@ -946,19 +685,10 @@
   * @optionName html5printshiv
   * @optionProp html5printshiv
   */
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   // Take the html5 variable out of the html5shiv scope so we can return it.
   var html5;
   if (!isSVG) {
-<<<<<<< HEAD
-    /**
-     * @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
-     */
-    (function(window, document) {
-      /** version */
-      var version = "3.7.3";
-=======
 
     /**
      * @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
@@ -966,7 +696,6 @@
     ;(function(window, document) {
       /** version */
       var version = '3.7.3';
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
       /** Preset options */
       var options = window.html5 || {};
@@ -981,11 +710,7 @@
       var supportsHtml5Styles;
 
       /** Name of the expando, to work with multiple documents or to re-shiv one document */
-<<<<<<< HEAD
-      var expando = "_html5shiv";
-=======
       var expando = '_html5shiv';
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
       /** The id for the the documents expando */
       var expanID = 0;
@@ -998,26 +723,6 @@
 
       (function() {
         try {
-<<<<<<< HEAD
-          var a = document.createElement("a");
-          a.innerHTML = "<xyz></xyz>";
-          //if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
-          supportsHtml5Styles = "hidden" in a;
-
-          supportsUnknownElements =
-            a.childNodes.length == 1 ||
-            (function() {
-              // assign a false positive if unable to shiv
-              document.createElement("a");
-              var frag = document.createDocumentFragment();
-              return (
-                typeof frag.cloneNode == "undefined" ||
-                typeof frag.createDocumentFragment == "undefined" ||
-                typeof frag.createElement == "undefined"
-              );
-            })();
-        } catch (e) {
-=======
           var a = document.createElement('a');
           a.innerHTML = '<xyz></xyz>';
           //if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
@@ -1034,17 +739,12 @@
             );
           }());
         } catch(e) {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           // assign a false positive if detection fails => unable to shiv
           supportsHtml5Styles = true;
           supportsUnknownElements = true;
         }
-<<<<<<< HEAD
-      })();
-=======
 
       }());
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
       /*--------------------------------------------------------------------------*/
 
@@ -1056,19 +756,10 @@
        * @returns {StyleSheet} The style element.
        */
       function addStyleSheet(ownerDocument, cssText) {
-<<<<<<< HEAD
-        var p = ownerDocument.createElement("p"),
-          parent =
-            ownerDocument.getElementsByTagName("head")[0] ||
-            ownerDocument.documentElement;
-
-        p.innerHTML = "x<style>" + cssText + "</style>";
-=======
         var p = ownerDocument.createElement('p'),
           parent = ownerDocument.getElementsByTagName('head')[0] || ownerDocument.documentElement;
 
         p.innerHTML = 'x<style>' + cssText + '</style>';
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         return parent.insertBefore(p.lastChild, parent.firstChild);
       }
 
@@ -1079,11 +770,7 @@
        */
       function getElements() {
         var elements = html5.elements;
-<<<<<<< HEAD
-        return typeof elements == "string" ? elements.split(" ") : elements;
-=======
         return typeof elements == 'string' ? elements.split(' ') : elements;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       }
 
       /**
@@ -1094,15 +781,6 @@
        */
       function addElements(newElements, ownerDocument) {
         var elements = html5.elements;
-<<<<<<< HEAD
-        if (typeof elements != "string") {
-          elements = elements.join(" ");
-        }
-        if (typeof newElements != "string") {
-          newElements = newElements.join(" ");
-        }
-        html5.elements = elements + " " + newElements;
-=======
         if(typeof elements != 'string'){
           elements = elements.join(' ');
         }
@@ -1110,7 +788,6 @@
           newElements = newElements.join(' ');
         }
         html5.elements = elements +' '+ newElements;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         shivDocument(ownerDocument);
       }
 
@@ -1138,19 +815,11 @@
        * @param {Document} ownerDocument The context document.
        * @returns {Object} The shived element.
        */
-<<<<<<< HEAD
-      function createElement(nodeName, ownerDocument, data) {
-        if (!ownerDocument) {
-          ownerDocument = document;
-        }
-        if (supportsUnknownElements) {
-=======
       function createElement(nodeName, ownerDocument, data){
         if (!ownerDocument) {
           ownerDocument = document;
         }
         if(supportsUnknownElements){
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           return ownerDocument.createElement(nodeName);
         }
         if (!data) {
@@ -1173,13 +842,7 @@
         //   a 403 response, will cause the tab/window to crash
         // * Script elements appended to fragments will execute when their `src`
         //   or `text` property is set
-<<<<<<< HEAD
-        return node.canHaveChildren && !reSkip.test(nodeName) && !node.tagUrn
-          ? data.frag.appendChild(node)
-          : node;
-=======
         return node.canHaveChildren && !reSkip.test(nodeName) && !node.tagUrn ? data.frag.appendChild(node) : node;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       }
 
       /**
@@ -1188,19 +851,11 @@
        * @param {Document} ownerDocument The context document.
        * @returns {Object} The shived DocumentFragment.
        */
-<<<<<<< HEAD
-      function createDocumentFragment(ownerDocument, data) {
-        if (!ownerDocument) {
-          ownerDocument = document;
-        }
-        if (supportsUnknownElements) {
-=======
       function createDocumentFragment(ownerDocument, data){
         if (!ownerDocument) {
           ownerDocument = document;
         }
         if(supportsUnknownElements){
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           return ownerDocument.createDocumentFragment();
         }
         data = data || getExpandoData(ownerDocument);
@@ -1208,11 +863,7 @@
           i = 0,
           elems = getElements(),
           l = elems.length;
-<<<<<<< HEAD
-        for (; i < l; i++) {
-=======
         for(;i<l;i++){
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           clone.createElement(elems[i]);
         }
         return clone;
@@ -1232,10 +883,6 @@
           data.frag = data.createFrag();
         }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         ownerDocument.createElement = function(nodeName) {
           //abort shiv
           if (!html5.shivMethods) {
@@ -1244,23 +891,6 @@
           return createElement(nodeName, ownerDocument, data);
         };
 
-<<<<<<< HEAD
-        ownerDocument.createDocumentFragment = Function(
-          "h,f",
-          "return function(){" +
-            "var n=f.cloneNode(),c=n.createElement;" +
-            "h.shivMethods&&(" +
-            // unroll the `createElement` calls
-            getElements()
-              .join()
-              .replace(/[\w\-:]+/g, function(nodeName) {
-                data.createElem(nodeName);
-                data.frag.createElement(nodeName);
-                return 'c("' + nodeName + '")';
-              }) +
-            ");return n}"
-        )(html5, data.frag);
-=======
         ownerDocument.createDocumentFragment = Function('h,f', 'return function(){' +
                                                         'var n=f.cloneNode(),c=n.createElement;' +
                                                         'h.shivMethods&&(' +
@@ -1272,7 +902,6 @@
                                                         }) +
           ');return n}'
                                                        )(html5, data.frag);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       }
 
       /*--------------------------------------------------------------------------*/
@@ -1290,17 +919,6 @@
         var data = getExpandoData(ownerDocument);
 
         if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
-<<<<<<< HEAD
-          data.hasCSS = !!addStyleSheet(
-            ownerDocument,
-            // corrects block display not defined in IE6/7/8/9
-            "article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}" +
-              // adds styling not present in IE6/7/8/9
-              "mark{background:#FF0;color:#000}" +
-              // hides non-rendered elements
-              "template{display:none}"
-          );
-=======
           data.hasCSS = !!addStyleSheet(ownerDocument,
                                         // corrects block display not defined in IE6/7/8/9
                                         'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}' +
@@ -1309,7 +927,6 @@
                                         // hides non-rendered elements
                                         'template{display:none}'
                                        );
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         }
         if (!supportsUnknownElements) {
           shivMethods(ownerDocument, data);
@@ -1329,53 +946,31 @@
        * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
        */
       var html5 = {
-<<<<<<< HEAD
-=======
-
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         /**
          * An array or space separated string of node names of the elements to shiv.
          * @memberOf html5
          * @type Array|String
          */
-<<<<<<< HEAD
-        elements:
-          options.elements ||
-          "abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video",
-=======
         'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video',
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
         /**
          * current version of html5shiv
          */
-<<<<<<< HEAD
-        version: version,
-=======
         'version': version,
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
         /**
          * A flag to indicate that the HTML5 style sheet should be inserted.
          * @memberOf html5
          * @type Boolean
          */
-<<<<<<< HEAD
-        shivCSS: options.shivCSS !== false,
-=======
         'shivCSS': (options.shivCSS !== false),
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
         /**
          * Is equal to true if a browser supports creating unknown/HTML5 elements
          * @memberOf html5
          * @type boolean
          */
-<<<<<<< HEAD
-        supportsUnknownElements: supportsUnknownElements,
-=======
         'supportsUnknownElements': supportsUnknownElements,
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
         /**
          * A flag to indicate that the document's `createElement` and `createDocumentFragment`
@@ -1383,28 +978,17 @@
          * @memberOf html5
          * @type Boolean
          */
-<<<<<<< HEAD
-        shivMethods: options.shivMethods !== false,
-=======
         'shivMethods': (options.shivMethods !== false),
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
         /**
          * A string to describe the type of `html5` object ("default" or "default print").
          * @memberOf html5
          * @type String
          */
-<<<<<<< HEAD
-        type: "default",
-
-        // shivs the document according to the specified `html5` object options
-        shivDocument: shivDocument,
-=======
         'type': 'default',
 
         // shivs the document according to the specified `html5` object options
         'shivDocument': shivDocument,
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
         //creates a shived element
         createElement: createElement,
@@ -1430,24 +1014,6 @@
       var reMedia = /^$|\b(?:all|print)\b/;
 
       /** Used to namespace printable elements */
-<<<<<<< HEAD
-      var shivNamespace = "html5shiv";
-
-      /** Detect whether the browser supports shivable style sheets */
-      var supportsShivableSheets =
-        !supportsUnknownElements &&
-        (function() {
-          // assign a false negative if unable to shiv
-          var docEl = document.documentElement;
-          return !(
-            typeof document.namespaces == "undefined" ||
-            typeof document.parentWindow == "undefined" ||
-            typeof docEl.applyElement == "undefined" ||
-            typeof docEl.removeNode == "undefined" ||
-            typeof window.attachEvent == "undefined"
-          );
-        })();
-=======
       var shivNamespace = 'html5shiv';
 
       /** Detect whether the browser supports shivable style sheets */
@@ -1462,7 +1028,6 @@
             typeof window.attachEvent == 'undefined'
         );
       }());
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
       /*--------------------------------------------------------------------------*/
 
@@ -1475,15 +1040,9 @@
        */
       function addWrappers(ownerDocument) {
         var node,
-<<<<<<< HEAD
-          nodes = ownerDocument.getElementsByTagName("*"),
-          index = nodes.length,
-          reElements = RegExp("^(?:" + getElements().join("|") + ")$", "i"),
-=======
           nodes = ownerDocument.getElementsByTagName('*'),
           index = nodes.length,
           reElements = RegExp('^(?:' + getElements().join('|') + ')$', 'i'),
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           result = [];
 
         while (index--) {
@@ -1505,13 +1064,7 @@
         var node,
           nodes = element.attributes,
           index = nodes.length,
-<<<<<<< HEAD
-          wrapper = element.ownerDocument.createElement(
-            shivNamespace + ":" + element.nodeName
-          );
-=======
           wrapper = element.ownerDocument.createElement(shivNamespace + ':' + element.nodeName);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
         // copy element attributes to the wrapper
         while (index--) {
@@ -1532,25 +1085,6 @@
        */
       function shivCssText(cssText) {
         var pair,
-<<<<<<< HEAD
-          parts = cssText.split("{"),
-          index = parts.length,
-          reElements = RegExp(
-            "(^|[\\s,>+~])(" + getElements().join("|") + ")(?=[[\\s,>+~#.:]|$)",
-            "gi"
-          ),
-          replacement = "$1" + shivNamespace + "\\:$2";
-
-        while (index--) {
-          pair = parts[index] = parts[index].split("}");
-          pair[pair.length - 1] = pair[pair.length - 1].replace(
-            reElements,
-            replacement
-          );
-          parts[index] = pair.join("}");
-        }
-        return parts.join("{");
-=======
           parts = cssText.split('{'),
           index = parts.length,
           reElements = RegExp('(^|[\\s,>+~])(' + getElements().join('|') + ')(?=[[\\s,>+~#.:]|$)', 'gi'),
@@ -1562,7 +1096,6 @@
           parts[index] = pair.join('}');
         }
         return parts.join('{');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       }
 
       /**
@@ -1595,11 +1128,7 @@
         if (!supportsShivableSheets || ownerDocument.printShived) {
           return ownerDocument;
         }
-<<<<<<< HEAD
-        if (typeof namespaces[shivNamespace] == "undefined") {
-=======
         if (typeof namespaces[shivNamespace] == 'undefined') {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           namespaces.add(shivNamespace);
         }
 
@@ -1608,18 +1137,11 @@
           if (shivedSheet) {
             shivedSheet.removeNode(true);
           }
-<<<<<<< HEAD
-          shivedSheet = null;
-        }
-
-        ownerWindow.attachEvent("onbeforeprint", function() {
-=======
           shivedSheet= null;
         }
 
         ownerWindow.attachEvent('onbeforeprint', function() {
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           removeSheet();
 
           var imports,
@@ -1639,18 +1161,11 @@
             // IE does not enforce a same origin policy for external style sheets...
             // but has trouble with some dynamically created stylesheets
             if (!sheet.disabled && reMedia.test(sheet.media)) {
-<<<<<<< HEAD
-              try {
-                imports = sheet.imports;
-                length = imports.length;
-              } catch (er) {
-=======
 
               try {
                 imports = sheet.imports;
                 length = imports.length;
               } catch(er){
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
                 length = 0;
               }
 
@@ -1660,23 +1175,11 @@
 
               try {
                 cssText.push(sheet.cssText);
-<<<<<<< HEAD
-              } catch (er) {}
-=======
               } catch(er){}
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
             }
           }
 
           // wrap all HTML5 elements with printable elements and add the shived style sheet
-<<<<<<< HEAD
-          cssText = shivCssText(cssText.reverse().join(""));
-          wrappers = addWrappers(ownerDocument);
-          shivedSheet = addStyleSheet(ownerDocument, cssText);
-        });
-
-        ownerWindow.attachEvent("onafterprint", function() {
-=======
           cssText = shivCssText(cssText.reverse().join(''));
           wrappers = addWrappers(ownerDocument);
           shivedSheet = addStyleSheet(ownerDocument, cssText);
@@ -1684,7 +1187,6 @@
         });
 
         ownerWindow.attachEvent('onafterprint', function() {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           // remove wrappers, leaving the original elements, and remove the shived style sheet
           removeWrappers(wrappers);
           clearTimeout(data._removeSheetTimer);
@@ -1698,24 +1200,12 @@
       /*--------------------------------------------------------------------------*/
 
       // expose API
-<<<<<<< HEAD
-      html5.type += " print";
-=======
       html5.type += ' print';
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       html5.shivPrint = shivPrint;
 
       // shiv for print
       shivPrint(document);
 
-<<<<<<< HEAD
-      if (typeof module == "object" && module.exports) {
-        module.exports = html5;
-      }
-    })(typeof window !== "undefined" ? window : this, document);
-  }
-
-=======
       if(typeof module == 'object' && module.exports){
         module.exports = html5;
       }
@@ -1725,7 +1215,6 @@
 
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * Previously, Modernizr.load was an alias for yepnope. Since yepnope was
    * deprecated, we removed it as well. It is not available on the website builder,
@@ -1744,21 +1233,6 @@
 
   if (window.console) {
     err = function() {
-<<<<<<< HEAD
-      var method = console.error ? "error" : "log";
-      window.console[method].apply(
-        window.console,
-        Array.prototype.slice.call(arguments)
-      );
-    };
-
-    warn = function() {
-      var method = console.warn ? "warn" : "log";
-      window.console[method].apply(
-        window.console,
-        Array.prototype.slice.call(arguments)
-      );
-=======
       var method = console.error ? 'error' : 'log';
       window.console[method].apply(window.console, Array.prototype.slice.call(arguments));
     };
@@ -1766,25 +1240,10 @@
     warn = function() {
       var method = console.warn ? 'warn' : 'log';
       window.console[method].apply(window.console, Array.prototype.slice.call(arguments));
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
     };
   }
 
   ModernizrProto.load = function() {
-<<<<<<< HEAD
-    if ("yepnope" in window) {
-      warn(
-        "yepnope.js (aka Modernizr.load) is no longer included as part of Modernizr. yepnope appears to be available on the page, so we’ll use it to handle this call to Modernizr.load, but please update your code to use yepnope directly.\n See http://github.com/Modernizr/Modernizr/issues/1182 for more information."
-      );
-      window.yepnope.apply(window, [].slice.call(arguments, 0));
-    } else {
-      err(
-        "yepnope.js (aka Modernizr.load) is no longer included as part of Modernizr. Get it from http://yepnopejs.com. See http://github.com/Modernizr/Modernizr/issues/1182 for more information."
-      );
-    }
-  };
-
-=======
     if ('yepnope' in window) {
       warn('yepnope.js (aka Modernizr.load) is no longer included as part of Modernizr. yepnope appears to be available on the page, so we’ll use it to handle this call to Modernizr.load, but please update your code to use yepnope directly.\n See http://github.com/Modernizr/Modernizr/issues/1182 for more information.');
       window.yepnope.apply(window, [].slice.call(arguments, 0));
@@ -1795,7 +1254,6 @@
 
 
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * getBody returns the body of a document, or an element that can stand in for
    * the body if a real body does not exist
@@ -1812,22 +1270,15 @@
 
     if (!body) {
       // Can't use the real body create a fake one.
-<<<<<<< HEAD
-      body = createElement(isSVG ? "svg" : "body");
-=======
       body = createElement(isSVG ? 'svg' : 'body');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       body.fake = true;
     }
 
     return body;
   }
 
-<<<<<<< HEAD
-=======
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * injectElementWithStyles injects an element with style element and some CSS rules
    *
@@ -1841,45 +1292,27 @@
    */
 
   function injectElementWithStyles(rule, callback, nodes, testnames) {
-<<<<<<< HEAD
-    var mod = "modernizr";
-=======
     var mod = 'modernizr';
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
     var style;
     var ret;
     var node;
     var docOverflow;
-<<<<<<< HEAD
-    var div = createElement("div");
-=======
     var div = createElement('div');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
     var body = getBody();
 
     if (parseInt(nodes, 10)) {
       // In order not to give false positives we create a node for each test
       // This also allows the method to scale for unspecified uses
       while (nodes--) {
-<<<<<<< HEAD
-        node = createElement("div");
-=======
         node = createElement('div');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
         div.appendChild(node);
       }
     }
 
-<<<<<<< HEAD
-    style = createElement("style");
-    style.type = "text/css";
-    style.id = "s" + mod;
-=======
     style = createElement('style');
     style.type = 'text/css';
     style.id = 's' + mod;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
     // IE6 will false positive on some tests due to the style element inside the test div somehow interfering offsetHeight, so insert it into body or fakebody.
     // Opera will act all quirky when injecting elements in documentElement when page is served as xml, needs fakebody too. #270
@@ -1895,19 +1328,11 @@
 
     if (body.fake) {
       //avoid crashing IE8, if background image is used
-<<<<<<< HEAD
-      body.style.background = "";
-      //Safari 5.13/5.1.4 OSX stops loading if ::-webkit-scrollbar is used and scrollbars are visible
-      body.style.overflow = "hidden";
-      docOverflow = docElement.style.overflow;
-      docElement.style.overflow = "hidden";
-=======
       body.style.background = '';
       //Safari 5.13/5.1.4 OSX stops loading if ::-webkit-scrollbar is used and scrollbars are visible
       body.style.overflow = 'hidden';
       docOverflow = docElement.style.overflow;
       docElement.style.overflow = 'hidden';
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       docElement.appendChild(body);
     }
 
@@ -1924,16 +1349,11 @@
     }
 
     return !!ret;
-<<<<<<< HEAD
-  }
-
-=======
 
   }
 
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * Modernizr.mq tests a given media query, live against the current state of the window
    * adapted from matchMedia polyfill by Scott Jehl and Paul Irish
@@ -1986,51 +1406,29 @@
     if (matchMedia) {
       return function(mq) {
         var mql = matchMedia(mq);
-<<<<<<< HEAD
-        return (mql && mql.matches) || false;
-=======
         return mql && mql.matches || false;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       };
     }
 
     return function(mq) {
       var bool = false;
 
-<<<<<<< HEAD
-      injectElementWithStyles(
-        "@media " + mq + " { #modernizr { position: absolute; } }",
-        function(node) {
-          bool =
-            (window.getComputedStyle
-              ? window.getComputedStyle(node, null)
-              : node.currentStyle
-            ).position == "absolute";
-        }
-      );
-=======
       injectElementWithStyles('@media ' + mq + ' { #modernizr { position: absolute; } }', function(node) {
         bool = (window.getComputedStyle ?
                 window.getComputedStyle(node, null) :
                 node.currentStyle).position == 'absolute';
       });
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
       return bool;
     };
   })();
 
-<<<<<<< HEAD
-  ModernizrProto.mq = mq;
-
-=======
 
   ModernizrProto.mq = mq;
 
   
 
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * contains checks to see if a string contains another string
    *
@@ -2042,17 +1440,11 @@
    */
 
   function contains(str, substr) {
-<<<<<<< HEAD
-    return !!~("" + str).indexOf(substr);
-  }
-
-=======
     return !!~('' + str).indexOf(substr);
   }
 
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * Create our "modernizr" element that we do most feature tests on.
    *
@@ -2060,11 +1452,7 @@
    */
 
   var modElem = {
-<<<<<<< HEAD
-    elem: createElement("modernizr")
-=======
     elem: createElement('modernizr')
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   };
 
   // Clean up this element
@@ -2072,11 +1460,8 @@
     delete modElem.elem;
   });
 
-<<<<<<< HEAD
-=======
   
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   var mStyle = {
     style: modElem.elem.style
   };
@@ -2087,11 +1472,8 @@
     delete mStyle.style;
   });
 
-<<<<<<< HEAD
-=======
   
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * domToCSS takes a camelCase string and converts it to kebab-case
    * e.g. boxSizing -> box-sizing
@@ -2103,14 +1485,6 @@
    */
 
   function domToCSS(name) {
-<<<<<<< HEAD
-    return name
-      .replace(/([A-Z])/g, function(str, m1) {
-        return "-" + m1.toLowerCase();
-      })
-      .replace(/^ms-/, "-ms-");
-  }
-=======
     return name.replace(/([A-Z])/g, function(str, m1) {
       return '-' + m1.toLowerCase();
     }).replace(/^ms-/, '-ms-');
@@ -2118,7 +1492,6 @@
   ;
 
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * wrapper around getComputedStyle, to fix issues with Firefox returning null when
    * called inside of a hidden iframe
@@ -2133,11 +1506,7 @@
   function computedStyle(elem, pseudo, prop) {
     var result;
 
-<<<<<<< HEAD
-    if ("getComputedStyle" in window) {
-=======
     if ('getComputedStyle' in window) {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       result = getComputedStyle.call(window, elem, pseudo);
       var console = window.console;
 
@@ -2147,16 +1516,8 @@
         }
       } else {
         if (console) {
-<<<<<<< HEAD
-          var method = console.error ? "error" : "log";
-          console[method].call(
-            console,
-            "getComputedStyle returning null, its possible modernizr test results are inaccurate"
-          );
-=======
           var method = console.error ? 'error' : 'log';
           console[method].call(console, 'getComputedStyle returning null, its possible modernizr test results are inaccurate');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         }
       }
     } else {
@@ -2166,11 +1527,8 @@
     return result;
   }
 
-<<<<<<< HEAD
-=======
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * nativeTestProps allows for us to use native feature detection functionality if available.
    * some prefixed form, or false, in the case of an unsupported rule
@@ -2187,11 +1545,7 @@
   function nativeTestProps(props, value) {
     var i = props.length;
     // Start with the JS API: http://www.w3.org/TR/css3-conditional/#the-css-interface
-<<<<<<< HEAD
-    if ("CSS" in window && "supports" in window.CSS) {
-=======
     if ('CSS' in window && 'supports' in window.CSS) {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       // Try every prefixed variant of the property
       while (i--) {
         if (window.CSS.supports(domToCSS(props[i]), value)) {
@@ -2201,26 +1555,6 @@
       return false;
     }
     // Otherwise fall back to at-rule (for Opera 12.x)
-<<<<<<< HEAD
-    else if ("CSSSupportsRule" in window) {
-      // Build a condition string for every prefixed variant
-      var conditionText = [];
-      while (i--) {
-        conditionText.push("(" + domToCSS(props[i]) + ":" + value + ")");
-      }
-      conditionText = conditionText.join(" or ");
-      return injectElementWithStyles(
-        "@supports (" +
-          conditionText +
-          ") { #modernizr { position: absolute; } }",
-        function(node) {
-          return computedStyle(node, null, "position") == "absolute";
-        }
-      );
-    }
-    return undefined;
-  }
-=======
     else if ('CSSSupportsRule' in window) {
       // Build a condition string for every prefixed variant
       var conditionText = [];
@@ -2236,7 +1570,6 @@
   }
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * cssToDOM takes a kebab-case string and converts it to camelCase
    * e.g. box-sizing -> boxSizing
@@ -2248,21 +1581,12 @@
    */
 
   function cssToDOM(name) {
-<<<<<<< HEAD
-    return name
-      .replace(/([a-z])-([a-z])/g, function(str, m1, m2) {
-        return m1 + m2.toUpperCase();
-      })
-      .replace(/^-/, "");
-  }
-=======
     return name.replace(/([a-z])-([a-z])/g, function(str, m1, m2) {
       return m1 + m2.toUpperCase();
     }).replace(/^-/, '');
   }
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   // testProps is a generic CSS / DOM property test.
 
   // In testing support for a given CSS property, it's legit to test:
@@ -2277,21 +1601,12 @@
   // Property names can be provided in either camelCase or kebab-case.
 
   function testProps(props, prefixed, value, skipValueTest) {
-<<<<<<< HEAD
-    skipValueTest = is(skipValueTest, "undefined") ? false : skipValueTest;
-
-    // Try native detect first
-    if (!is(value, "undefined")) {
-      var result = nativeTestProps(props, value);
-      if (!is(result, "undefined")) {
-=======
     skipValueTest = is(skipValueTest, 'undefined') ? false : skipValueTest;
 
     // Try native detect first
     if (!is(value, 'undefined')) {
       var result = nativeTestProps(props, value);
       if (!is(result, 'undefined')) {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         return result;
       }
     }
@@ -2306,11 +1621,7 @@
     // defined for valid tags. Therefore, if `modernizr` does not have one, we
     // fall back to a less used element and hope for the best.
     // for strict XHTML browsers the hardly used samp element is used
-<<<<<<< HEAD
-    var elems = ["modernizr", "tspan", "samp"];
-=======
     var elems = ['modernizr', 'tspan', 'samp'];
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
     while (!mStyle.style && elems.length) {
       afterInit = true;
       mStyle.modElem = createElement(elems.shift());
@@ -2330,28 +1641,17 @@
       prop = props[i];
       before = mStyle.style[prop];
 
-<<<<<<< HEAD
-      if (contains(prop, "-")) {
-=======
       if (contains(prop, '-')) {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         prop = cssToDOM(prop);
       }
 
       if (mStyle.style[prop] !== undefined) {
-<<<<<<< HEAD
-        // If value to test has been passed in, do a set-and-check test.
-        // 0 (integer) is a valid property value, so check that `value` isn't
-        // undefined, rather than just checking it's truthy.
-        if (!skipValueTest && !is(value, "undefined")) {
-=======
 
         // If value to test has been passed in, do a set-and-check test.
         // 0 (integer) is a valid property value, so check that `value` isn't
         // undefined, rather than just checking it's truthy.
         if (!skipValueTest && !is(value, 'undefined')) {
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           // Needs a try catch block because of old IE. This is slow, but will
           // be avoided in most cases because `skipValueTest` will be used.
           try {
@@ -2364,22 +1664,14 @@
           // CSS.supports()
           if (mStyle.style[prop] != before) {
             cleanElems();
-<<<<<<< HEAD
-            return prefixed == "pfx" ? prop : true;
-=======
             return prefixed == 'pfx' ? prop : true;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           }
         }
         // Otherwise just return true, or the property name if this is a
         // `prefixed()` call
         else {
           cleanElems();
-<<<<<<< HEAD
-          return prefixed == "pfx" ? prop : true;
-=======
           return prefixed == 'pfx' ? prop : true;
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         }
       }
     }
@@ -2387,11 +1679,8 @@
     return false;
   }
 
-<<<<<<< HEAD
-=======
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * fnBind is a super small [bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) polyfill.
    *
@@ -2408,11 +1697,8 @@
     };
   }
 
-<<<<<<< HEAD
-=======
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * testDOMProps is a generic DOM property test; if a browser supports
    *   a certain property, it won't return undefined for it.
@@ -2429,10 +1715,6 @@
 
     for (var i in props) {
       if (props[i] in obj) {
-<<<<<<< HEAD
-=======
-
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
         // return the property name as a string
         if (elem === false) {
           return props[i];
@@ -2441,11 +1723,7 @@
         item = obj[props[i]];
 
         // let's bind a function
-<<<<<<< HEAD
-        if (is(item, "function")) {
-=======
         if (is(item, 'function')) {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
           // bind to obj unless overriden
           return fnBind(item, elem || obj);
         }
@@ -2457,11 +1735,8 @@
     return false;
   }
 
-<<<<<<< HEAD
-=======
   ;
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * testPropsAll tests a list of DOM properties we want to check against.
    * We specify literally ALL possible (known and/or likely) properties on
@@ -2478,31 +1753,17 @@
    * @returns {false|string} returns the string version of the property, or false if it is unsupported
    */
   function testPropsAll(prop, prefixed, elem, value, skipValueTest) {
-<<<<<<< HEAD
-    var ucProp = prop.charAt(0).toUpperCase() + prop.slice(1),
-      props = (prop + " " + cssomPrefixes.join(ucProp + " ") + ucProp).split(
-        " "
-      );
-
-    // did they call .prefixed('boxSizing') or are we just testing a prop?
-    if (is(prefixed, "string") || is(prefixed, "undefined")) {
-=======
 
     var ucProp = prop.charAt(0).toUpperCase() + prop.slice(1),
       props = (prop + ' ' + cssomPrefixes.join(ucProp + ' ') + ucProp).split(' ');
 
     // did they call .prefixed('boxSizing') or are we just testing a prop?
     if (is(prefixed, 'string') || is(prefixed, 'undefined')) {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       return testProps(props, prefixed, value, skipValueTest);
 
       // otherwise, they called .prefixed('requestAnimationFrame', window[, elem])
     } else {
-<<<<<<< HEAD
-      props = (prop + " " + domPrefixes.join(ucProp + " ") + ucProp).split(" ");
-=======
       props = (prop + ' ' + (domPrefixes).join(ucProp + ' ') + ucProp).split(' ');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       return testDOMProps(props, prefixed, elem);
     }
   }
@@ -2514,11 +1775,8 @@
   // Modernizr.testAllProps('boxSizing')
   ModernizrProto.testAllProps = testPropsAll;
 
-<<<<<<< HEAD
-=======
   
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * prefixed returns the prefixed or nonprefixed property name variant of your input
    *
@@ -2584,41 +1842,24 @@
    * If you want a similar lookup, but in kebab-case, you can use [prefixedCSS](#modernizr-prefixedcss).
    */
 
-<<<<<<< HEAD
-  var prefixed = (ModernizrProto.prefixed = function(prop, obj, elem) {
-    if (prop.indexOf("@") === 0) {
-      return atRule(prop);
-    }
-
-    if (prop.indexOf("-") != -1) {
-=======
   var prefixed = ModernizrProto.prefixed = function(prop, obj, elem) {
     if (prop.indexOf('@') === 0) {
       return atRule(prop);
     }
 
     if (prop.indexOf('-') != -1) {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       // Convert kebab-case to camelCase
       prop = cssToDOM(prop);
     }
     if (!obj) {
-<<<<<<< HEAD
-      return testPropsAll(prop, "pfx");
-=======
       return testPropsAll(prop, 'pfx');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
     } else {
       // Testing DOM property e.g. Modernizr.prefixed('requestAnimationFrame', window) // 'mozRequestAnimationFrame'
       return testPropsAll(prop, obj, elem);
     }
-<<<<<<< HEAD
-  });
-=======
   };
 
   
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    * List of property values to set for css tests. See ticket #21
@@ -2654,22 +1895,13 @@
 
   // we use ['',''] rather than an empty array in order to allow a pattern of .`join()`ing prefixes to test
   // values in feature detects to continue to work
-<<<<<<< HEAD
-  var prefixes = ModernizrProto._config.usePrefixes
-    ? " -webkit- -moz- -o- -ms- ".split(" ")
-    : ["", ""];
-=======
   var prefixes = (ModernizrProto._config.usePrefixes ? ' -webkit- -moz- -o- -ms- '.split(' ') : ['','']);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   // expose these for the plugin API. Look in the source for how to join() them against your input
   ModernizrProto._prefixes = prefixes;
 
-<<<<<<< HEAD
-=======
   
 
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   /**
    * prefixedCSS is just like [prefixed](#modernizr-prefixed), but the returned values are in
    * kebab-case (e.g. `box-sizing`) rather than camelCase (boxSizing).
@@ -2698,18 +1930,11 @@
    * Properties can be passed as both the DOM style camelCase or CSS style kebab-case.
    */
 
-<<<<<<< HEAD
-  var prefixedCSS = (ModernizrProto.prefixedCSS = function(prop) {
-    var prefixedProp = prefixed(prop);
-    return prefixedProp && domToCSS(prefixedProp);
-  });
-=======
   var prefixedCSS = ModernizrProto.prefixedCSS = function(prop) {
     var prefixedProp = prefixed(prop);
     return prefixedProp && domToCSS(prefixedProp);
   };
   
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    * testAllProps determines whether a given CSS property is supported in the browser
@@ -2752,10 +1977,7 @@
     return testPropsAll(prop, undefined, undefined, value, skipValueTest);
   }
   ModernizrProto.testAllProps = testAllProps;
-<<<<<<< HEAD
-=======
   
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    * testProp() investigates whether a given style property is recognized
@@ -2791,16 +2013,10 @@
    * ```
    */
 
-<<<<<<< HEAD
-  var testProp = (ModernizrProto.testProp = function(prop, value, useValue) {
-    return testProps([prop], undefined, value, useValue);
-  });
-=======
   var testProp = ModernizrProto.testProp = function(prop, value, useValue) {
     return testProps([prop], undefined, value, useValue);
   };
   
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 
   /**
    * testStyles injects an element with style element and some CSS rules
@@ -2859,15 +2075,9 @@
    *
    */
 
-<<<<<<< HEAD
-  var testStyles = (ModernizrProto.testStyles = injectElementWithStyles);
-
-  /*!
-=======
   var testStyles = ModernizrProto.testStyles = injectElementWithStyles;
   
 /*!
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 {
   "name": "CSS Supports",
   "property": "supports",
@@ -2887,19 +2097,11 @@
 }
 !*/
 
-<<<<<<< HEAD
-  var newSyntax = "CSS" in window && "supports" in window.CSS;
-  var oldSyntax = "supportsCSS" in window;
-  Modernizr.addTest("supports", newSyntax || oldSyntax);
-
-  /*!
-=======
   var newSyntax = 'CSS' in window && 'supports' in window.CSS;
   var oldSyntax = 'supportsCSS' in window;
   Modernizr.addTest('supports', newSyntax || oldSyntax);
 
 /*!
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 {
   "name": "sizes attribute",
   "async": true,
@@ -2915,31 +2117,12 @@
     }]
 }
 !*/
-<<<<<<< HEAD
-  /* DOC
-=======
 /* DOC
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 Test for the `sizes` attribute on images
 */
 
   Modernizr.addAsyncTest(function() {
     var width1, width2, test;
-<<<<<<< HEAD
-    var image = createElement("img");
-    // in a perfect world this would be the test...
-    var isSizes = "sizes" in image;
-
-    // ... but we need to deal with Safari 9...
-    if (!isSizes && "srcset" in image) {
-      width2 =
-        "data:image/gif;base64,R0lGODlhAgABAPAAAP///wAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==";
-      width1 =
-        "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
-
-      test = function() {
-        addTest("sizes", image.width == 2);
-=======
     var image = createElement('img');
     // in a perfect world this would be the test...
     var isSizes = 'sizes' in image;
@@ -2951,23 +2134,10 @@ Test for the `sizes` attribute on images
 
       test = function() {
         addTest('sizes', image.width == 2);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       };
 
       image.onload = test;
       image.onerror = test;
-<<<<<<< HEAD
-      image.setAttribute("sizes", "9px");
-
-      image.srcset = width1 + " 1w," + width2 + " 8w";
-      image.src = width1;
-    } else {
-      addTest("sizes", isSizes);
-    }
-  });
-
-  /*!
-=======
       image.setAttribute('sizes', '9px');
 
       image.srcset = width1 + ' 1w,' + width2 + ' 8w';
@@ -2978,7 +2148,6 @@ Test for the `sizes` attribute on images
   });
 
 /*!
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 {
   "name": "srcset attribute",
   "property": "srcset",
@@ -2992,15 +2161,6 @@ Test for the `sizes` attribute on images
     }]
 }
 !*/
-<<<<<<< HEAD
-  /* DOC
-Test for the srcset attribute of images
-*/
-
-  Modernizr.addTest("srcset", "srcset" in createElement("img"));
-
-  /*!
-=======
 /* DOC
 Test for the srcset attribute of images
 */
@@ -3008,7 +2168,6 @@ Test for the srcset attribute of images
   Modernizr.addTest('srcset', 'srcset' in createElement('img'));
 
 /*!
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 {
   "name": "ServiceWorker API",
   "property": "serviceworker",
@@ -3018,15 +2177,6 @@ Test for the srcset attribute of images
   }]
 }
 !*/
-<<<<<<< HEAD
-  /* DOC
-ServiceWorkers (formerly Navigation Controllers) are a way to persistently cache resources to built apps that work better offline.
-*/
-
-  Modernizr.addTest("serviceworker", "serviceWorker" in navigator);
-
-  /*!
-=======
 /* DOC
 ServiceWorkers (formerly Navigation Controllers) are a way to persistently cache resources to built apps that work better offline.
 */
@@ -3034,7 +2184,6 @@ ServiceWorkers (formerly Navigation Controllers) are a way to persistently cache
   Modernizr.addTest('serviceworker', 'serviceWorker' in navigator);
 
 /*!
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 {
   "name": "Touch Events",
   "property": "touchevents",
@@ -3053,11 +2202,7 @@ ServiceWorkers (formerly Navigation Controllers) are a way to persistently cache
   ]
 }
 !*/
-<<<<<<< HEAD
-  /* DOC
-=======
 /* DOC
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
 Indicates if the browser supports the W3C Touch Events API.
 
 This *does not* necessarily reflect a touchscreen device:
@@ -3075,33 +2220,14 @@ This test will also return `true` for Firefox 4 Multitouch support.
 */
 
   // Chrome (desktop) used to lie about its support on this, but that has since been rectified: http://crbug.com/36415
-<<<<<<< HEAD
-  Modernizr.addTest("touchevents", function() {
-    var bool;
-    if (
-      "ontouchstart" in window ||
-      (window.DocumentTouch && document instanceof DocumentTouch)
-    ) {
-=======
   Modernizr.addTest('touchevents', function() {
     var bool;
     if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       bool = true;
     } else {
       // include the 'heartz' as a way to have a non matching MQ to help terminate the join
       // https://git.io/vznFH
-<<<<<<< HEAD
-      var query = [
-        "@media (",
-        prefixes.join("touch-enabled),("),
-        "heartz",
-        ")",
-        "{#modernizr{top:9px;position:absolute}}"
-      ].join("");
-=======
       var query = ['@media (', prefixes.join('touch-enabled),('), 'heartz', ')', '{#modernizr{top:9px;position:absolute}}'].join('');
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
       testStyles(query, function(node) {
         bool = node.offsetTop === 9;
       });
@@ -3109,10 +2235,6 @@ This test will also return `true` for Firefox 4 Multitouch support.
     return bool;
   });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
   // Run each test
   testRunner();
 
@@ -3129,12 +2251,8 @@ This test will also return `true` for Firefox 4 Multitouch support.
 
   // Leak Modernizr namespace
   window.Modernizr = Modernizr;
-<<<<<<< HEAD
-})(window, document);
-=======
 
 
 ;
 
 })(window, document);
->>>>>>> 03115d29131015253824b72ebc116bb9f167aacc
