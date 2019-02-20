@@ -1,0 +1,92 @@
+/* icons */
+
+.sprite {
+    background-image: url(../images/icons/spritesheet.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+.sprite-arial {
+    width: 21px;
+    height: 22px;
+    background-position: -5px -5px;
+}
+
+.sprite-close {
+    width: 49px;
+    height: 48px;
+    background-position: -36px -5px;
+}
+
+.sprite-cogwheel {
+    width: 50px;
+    height: 50px;
+    background-position: -95px -5px;
+}
+
+.sprite-diploma {
+    width: 50px;
+    height: 69px;
+    background-position: -155px -5px;
+}
+
+.sprite-filament {
+    width: 70px;
+    height: 70px;
+    background-position: -5px -84px;
+}
+
+.sprite-flask {
+    width: 70px;
+    height: 70px;
+    background-position: -85px -84px;
+}
+
+.sprite-handshake {
+    width: 50px;
+    height: 50px;
+    background-position: -165px -84px;
+}
+
+.sprite-leaves {
+    width: 70px;
+    height: 70px;
+    background-position: -165px -144px;
+}
+
+.sprite-pin {
+    width: 70px;
+    height: 70px;
+    background-position: -225px -5px;
+}
+
+.sprite-pipe {
+    width: 50px;
+    height: 55px;
+    background-position: -245px -85px;
+}
+
+.sprite-right-arrow {
+    width: 41px;
+    height: 22px;
+    background-position: -245px -150px;
+}
+
+.sprite-left-arrow {
+    width: 41px;
+    height: 22px;
+    background-position: -245px -150px;
+    transform: rotate(180deg)
+}
+
+.sprite-shield {
+    width: 70px;
+    height: 70px;
+    background-position: -5px -182px;
+}
+
+.sprite-speed {
+    width: 70px;
+    height: 70px;
+    background-position: -85px -182px;
+}

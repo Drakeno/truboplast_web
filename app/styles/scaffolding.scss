@@ -1,0 +1,66 @@
+@import 'extra';
+
+@font-face {
+    font-family: 'Russo One';
+    src: local('Russo One'), local('RussoOne'), url('../fonts/russoone.woff2') format('woff2'), url('../fonts/russoone.woff') format('woff'), url('../fonts/russoone.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans'), local('OpenSans'), url('../fonts/opensans.woff2') format('woff2'), url('../fonts/opensans.woff') format('woff'), url('../fonts/opensans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: local('Open Sans Bold'), local('OpenSans-Bold'), url('../fonts/opensansbold.woff2') format('woff2'), url('../fonts/opensansbold.woff') format('woff'), url('../fonts/opensansbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 1px;
+}
+
+.read-text {
+    font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 940px;
+    }
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.line-styling {
+    position: relative;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        left: 10px;
+        top: 10px;
+        width: 63px;
+        height: 6px;
+        background: $blue; 
+    }
+}
+
+.big-up-title {
+    font-size: 50px;
+    letter-spacing: 1px;
+    color: $black;
+}

@@ -36,15 +36,15 @@
 
   var ModernizrProto = {
     // The current version, dummy
-    _version: "3.6.0",
+    _version: '3.6.0',
 
     // Any settings that don't work as separate modules
     // can go in here as configuration.
     _config: {
-      classPrefix: "modernizr-",
-      enableClasses: true,
-      enableJSClass: true,
-      usePrefixes: true
+      'classPrefix': "modernizr-",
+      'enableClasses': true,
+      'enableJSClass': true,
+      'usePrefixes': true
     },
 
     // Queue of tests
@@ -65,13 +65,15 @@
     },
 
     addTest: function(name, fn, options) {
-      tests.push({ name: name, fn: fn, options: options });
+      tests.push({name: name, fn: fn, options: options});
     },
 
     addAsyncTest: function(fn) {
-      tests.push({ name: null, fn: fn });
+      tests.push({name: null, fn: fn});
     }
   };
+
+  
 
   // Fake some of Object.create so we can force non test results to be non "own" properties.
   var Modernizr = function() {};
@@ -81,7 +83,10 @@
   // Overwrite name so constructor name is nicer :D
   Modernizr = new Modernizr();
 
+  
+
   var classes = [];
+  
 
   /**
    * is returns a boolean if the typeof an obj is exactly type.
@@ -883,6 +888,7 @@
           data.frag = data.createFrag();
         }
 
+
         ownerDocument.createElement = function(nodeName) {
           //abort shiv
           if (!html5.shivMethods) {
@@ -946,6 +952,7 @@
        * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
        */
       var html5 = {
+
         /**
          * An array or space separated string of node names of the elements to shiv.
          * @memberOf html5
@@ -1715,6 +1722,7 @@
 
     for (var i in props) {
       if (props[i] in obj) {
+
         // return the property name as a string
         if (elem === false) {
           return props[i];
@@ -2234,6 +2242,7 @@ This test will also return `true` for Firefox 4 Multitouch support.
     }
     return bool;
   });
+
 
   // Run each test
   testRunner();

@@ -1,0 +1,46 @@
+@import 'extra';
+
+.footer {
+    color: $white;
+    background: $dark;
+    &__wrap {
+        padding: 100px 0;
+    }
+    &__menu {
+        list-style: none;
+        li>a {
+            color: $white;
+            opacity: 0.5;
+            font-size: 18px;
+            text-transform: uppercase;
+            &:hover {
+                opacity: 1;
+                text-decoration: none;
+            }
+        }
+    }
+    .phone-footer {
+        &__hint {
+            font-size: 18px;
+        }
+        &__link {
+            color: $white;
+            font-size: 22px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &__text {
+        font-size: 18px;
+        opacity: 0.5;
+        &--link {
+            color: $white;
+            &:hover {
+                color: $white;
+                opacity: 1;
+                text-decoration: none;
+            }
+        }
+    }
+}
