@@ -14,6 +14,7 @@
 
     <!-- build:css styles/core.css -->
     <link rel="stylesheet" href="/node_modules/bootstrap3/dist/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/node_modules/swiper/dist/css/swiper.min.css" type="text/css" />
     <!-- endbuild -->
 
     <!--[if lte IE 8]>
@@ -41,6 +42,7 @@
         18.02 Затратил: 1,5 часа. Разметка хедера, предусмотрительная установка базовых библиотек и скриптов.
         19.02 затратил 3 часа
         20.02 затратил 2 часа
+        21.02 затратил 1 час
     -->
 
     <header class="header">
@@ -110,43 +112,43 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <figure class="advantages-section__item">
+                        <div class="advantages-section__item">
                             <div class="advantages-section__icon">
                                 <i class="sprite sprite-pin"></i>
                             </div>
                             <div class="advantages-section__content">
                                 <p class="advantages-section__name">ГЕОГРАФИЯ</p>
-                                <figcaption class="advantages-section__text read-text">Работаем по всей России и СНГ.
+                                <div class="advantages-section__text read-text">Работаем по всей России и СНГ.
                                     Помогаем
-                                    клиентам с логистикой.</figcaption>
+                                    клиентам с логистикой.</div>
                             </div>
-                        </figure>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <figure class="advantages-section__item">
+                        <div class="advantages-section__item">
                             <div class="advantages-section__icon">
                                 <i class="sprite sprite-speed"></i>
                             </div>
                             <div class="advantages-section__content">
                                 <p class="advantages-section__name">СКОРОСТЬ</p>
-                                <figcaption class="advantages-section__text read-text">Производственные линии работают
+                                <div class="advantages-section__text read-text">Производственные линии работают
                                     24/7.
-                                </figcaption>
+                                </div>
                             </div>
-                        </figure>
+                        </div>
                     </div>
                     <div class="col-md-4">
-                        <figure class="advantages-section__item">
+                        <div class="advantages-section__item">
                             <div class="advantages-section__icon">
                                 <i class="sprite sprite-filament"></i>
                             </div>
                             <div class="advantages-section__content">
                                 <p class="advantages-section__name">АССОРТИМЕНТ</p>
-                                <figcaption class="advantages-section__text read-text">Широкий ассортимент на складе в
+                                <div class="advantages-section__text read-text">Широкий ассортимент на складе в
                                     наличии.
-                                </figcaption>
+                                </div>
                             </div>
-                        </figure>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -240,6 +242,156 @@
                     ПЕРСОНАЛЬНЫХ ДАННЫХ
                 </label>
             </div>
+        </div>
+    </main>
+
+    <main class="page-content" id="catalog">
+        <div class="page-content__top">
+            <div class="container">
+                <h1 class="page-content__title">ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ</h1>
+                <p class="page-content__pagination">ГЛАВНАЯ / КАТАЛОГ / ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ</p>
+            </div>
+        </div>
+
+        <div class="details">
+            <div class="details__head">
+                <div class="container">
+                    <div class="item-detail">
+                        <div class="item-detail__content">
+                            <h2 class="item-detail__title">Трубы из полиэтилена для газопроводов ГОСТ Р 50838-2009</h2>
+                            <p class="item-detail__caption"><b>Трубы из полиэтилена (ПЭ) более 50 лет применяются во
+                                    всём
+                                    мире</b></p>
+                            <p class="item-detail__text read-text">
+                                Газопроводные системы из полиэтилена применяются для сетей газораспределения, в т. ч.
+                                высокого давления I категории. Трубы ПЭ предназначены для транспортировки горючих газов
+                                по
+                                ГОСТ 5542, прошли экспертизу промышленной безопасности в лицензированной Ростехнадзором
+                                экспертной организации, имеют сертификат соответствия EN 1555-2:2010
+                            </p>
+                        </div>
+                        <div class="item-detail__img">
+                            <img src="images/detail1.jpg" alt="Детальная картинка" class="img-responsive">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details__bonuses bonus-icons">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-6 col-md-3">
+                            <div class="bonus-icons__item bonus">
+                                <i class="sprite sprite-shield"></i>
+                                <p class="bonus__title">Гарантия</p>
+                                <p class="bonus__text read-text">30 лет гарантия герметичности</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="bonus-icons__item bonus">
+                                <i class="sprite sprite-leaves"></i>
+                                <p class="bonus__title">Экологичность</p>
+                                <p class="bonus__text read-text">Пригодна для питьевой воды</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="bonus-icons__item bonus">
+                                <i class="sprite sprite-flask"></i>
+                                <p class="bonus__title">Прочность</p>
+                                <p class="bonus__text read-text">Отсутствует коррозия</p>
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-md-3">
+                            <div class="bonus-icons__item bonus">
+                                <i class="sprite sprite-diploma"></i>
+                                <p class="bonus__title">Сертификация</p>
+                                <p class="bonus__text read-text">Соответствует ГОСТу</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details__numbers item-numbers">
+                <div class="container">
+                    <h3 class="big-subtitle item-numbers__title">
+                        ХАРАКТЕРИСТИКИ
+                    </h3>
+                    <div class="item-numbers__body">
+                        <div class="item-numbers__row">
+                            <p class="item-numbers__name">Диаметр DN/OD</p>
+                            <p class="item-numbers__value">20-630 мм</p>
+                        </div>
+                        <div class="item-numbers__row">
+                            <p class="item-numbers__name">SDR</p>
+                            <p class="item-numbers__value">9, 11, 13.6, 17, 21, 26</p>
+                        </div>
+                        <div class="item-numbers__row">
+                            <p class="item-numbers__name">Рабочее давление</p>
+                            <p class="item-numbers__value">до 1,2 МПа</p>
+                        </div>
+                        <div class="item-numbers__row">
+                            <p class="item-numbers__name">Материал</p>
+                            <p class="item-numbers__value">ПЭ 80, ПЭ 100</p>
+                        </div>
+                        <div class="item-numbers__row">
+                            <p class="item-numbers__name">Нормативная документация</p>
+                            <p class="item-numbers__value">ГОСТ Р 50838-2009</p>
+                        </div>
+                        <div class="item-numbers__row">
+                            <p class="item-numbers__name">Срок службы</p>
+                            <p class="item-numbers__value">более 50 лет</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details__help help-hint">
+                <div class="container">
+                    <h3 class="big-subtitle help-hint__title">НЕ НАШЛИ НУЖНЫЙ РАЗМЕР?</h3>
+                    <div class="help-hint__wrap">
+                        <div class="help-hint__info">
+                            <p class="help-hint__text read-text">Производим все типы и размеры полиэтиленовых труб.
+                                 Индивидуальный подход к каждому клиенту. Звоните!</p>
+                        </div>
+                        <div class="help-hint__contacts">
+                            <p class="help-hint__name">ОТДЕЛ ПРОДАЖ</p>
+                            <a class="help-hint__value help-hint__value--phone"
+                                href="tel:+78007007080">8-800-700-70-80</a>
+                            <a class="help-hint__value help-hint__value--email"
+                                href="mailto:truba@list.ru">truba@list.ru</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details__docs docs">
+                <div class="container">
+                    <h3 class="big-subtitle docs__title">ДОКУМЕНТАЦИЯ</h3>
+
+                    <div class="docs__wrap">
+                        <figure class="docs__item">
+                            <a href="#"><img src="images/document.png" alt="Документ" class="img-responsive"></a>
+                            <figcaption class="docs__text">ГОСТ 18559-2001</figcaption>
+                        </figure>
+                        <figure class="docs__item">
+                            <a href="#"><img src="images/document.png" alt="Документ" class="img-responsive"></a>
+                            <figcaption class="docs__text">ГОСТ 18559-2001</figcaption>
+                        </figure>
+                        <figure class="docs__item">
+                            <a href="#"><img src="images/document.png" alt="Документ" class="img-responsive"></a>
+                            <figcaption class="docs__text">ГОСТ 18559-2001</figcaption>
+                        </figure>
+                    </div>
+                    <div class="reviews-block__navigation fnavigation text-right">
+                        <div class="big-btn big-btn--red fnavigation__btn"><i class="sprite sprite-left-arrow"></i>
+                        </div>
+                        <div class="big-btn big-btn--red fnavigation__btn"><i class="sprite sprite-right-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -381,6 +533,7 @@
     <!-- build:js scripts/vendor.js -->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/node_modules/swiper/dist/js/swiper.min.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
