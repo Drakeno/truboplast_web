@@ -1,5 +1,4 @@
 @import 'extra';
-
 @font-face {
     font-family: 'Russo One';
     src: local('Russo One'), local('RussoOne'), url('../fonts/russoone.woff2') format('woff2'), url('../fonts/russoone.woff') format('woff'), url('../fonts/russoone.ttf') format('truetype');
@@ -55,7 +54,21 @@ body {
         top: 10px;
         width: 63px;
         height: 6px;
-        background: $blue; 
+        background: $blue;
+    }
+}
+
+.big-head {
+    &__title {
+
+    }
+
+    &__subtitle {
+
+    }
+
+    &__hint {
+        
     }
 }
 
@@ -65,6 +78,4 @@ body {
     color: $black;
 }
 
-.big-subtitle {
-
-}
+.big-subtitle {}

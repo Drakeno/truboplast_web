@@ -38,6 +38,7 @@
     <!--
         1. Почему у телефона в хедере синяя стрелочка вниз справа. Ссылка должна куда-то физически скроллить, что-то должно выпадать?
         2. Каталог ведь будет выпадающий многоуровневый?
+        3. Че за иконка телефона
 
         18.02 Затратил: 1,5 часа. Разметка хедера, предусмотрительная установка базовых библиотек и скриптов.
         19.02 затратил 3 часа
@@ -96,12 +97,13 @@
     </header>
 
     <main class="main-content" id="main-page">
-        <div class="main-content__image">
+        <div class="main-content__image big-head">
             <div class="container">
-                <h1 class="main-content__title">ПРОИЗВОДСТВО ПОЛИЭТИЛЕНОВЫХ ТРУБ</h1>
-                <p class="main-content__info">ДЛЯ ВОДОСНАБЖЕНИЯ, ГАЗОСНАБЖЕНИЯ И КАНАЛИЗАЦИИ</p>
+                <h1 class="main-content__title big-head__title">ПРОИЗВОДСТВО ПОЛИЭТИЛЕНОВЫХ ТРУБ</h1>
+                <p class="main-content__info big-head__subtitle">ДЛЯ ВОДОСНАБЖЕНИЯ, ГАЗОСНАБЖЕНИЯ И КАНАЛИЗАЦИИ</p>
                 <div class="main-content__styling-line line-styling">
-                    <p class="main-content__text read-text">Наше производственное предприятие специализируется на
+                    <p class="main-content__text big-head__hint read-text">Наше производственное предприятие
+                        специализируется на
                         производстве
                         полиэтиленовых труб всех типов и размеров. Изготавливаем трубы нестандартных размеров</p>
                 </div>
@@ -112,41 +114,41 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="advantages-section__item">
-                            <div class="advantages-section__icon">
+                        <div class="advantage">
+                            <div class="advantage__icon">
                                 <i class="sprite sprite-pin"></i>
                             </div>
-                            <div class="advantages-section__content">
-                                <p class="advantages-section__name">ГЕОГРАФИЯ</p>
-                                <div class="advantages-section__text read-text">Работаем по всей России и СНГ.
+                            <div class="advantage__content">
+                                <p class="advantage__name">ГЕОГРАФИЯ</p>
+                                <p class="advantage__text read-text">Работаем по всей России и СНГ.
                                     Помогаем
-                                    клиентам с логистикой.</div>
+                                    клиентам с логистикой.</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="advantages-section__item">
-                            <div class="advantages-section__icon">
+                        <div class="advantage__item">
+                            <div class="advantage__icon">
                                 <i class="sprite sprite-speed"></i>
                             </div>
-                            <div class="advantages-section__content">
-                                <p class="advantages-section__name">СКОРОСТЬ</p>
-                                <div class="advantages-section__text read-text">Производственные линии работают
+                            <div class="advantage__content">
+                                <p class="advantage__name">СКОРОСТЬ</p>
+                                <p class="advantage__text read-text">Производственные линии работают
                                     24/7.
-                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="advantages-section__item">
-                            <div class="advantages-section__icon">
+                        <div class="advantage__item">
+                            <div class="advantage__icon">
                                 <i class="sprite sprite-filament"></i>
                             </div>
-                            <div class="advantages-section__content">
-                                <p class="advantages-section__name">АССОРТИМЕНТ</p>
-                                <div class="advantages-section__text read-text">Широкий ассортимент на складе в
+                            <div class="advantage__content">
+                                <p class="advantage__name">АССОРТИМЕНТ</p>
+                                <p class="advantage__text read-text">Широкий ассортимент на складе в
                                     наличии.
-                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -226,7 +228,7 @@
             </div>
         </section>
 
-        <div class="red-form">
+        <section class="red-form">
             <div class="container">
                 <h3 class="red-form__title">ПОЛУЧИТЬ СКИДКУ ДО 30%</h3>
                 <p class="red-form__text read-text">Оформите заказ в первый день обращения и получите гарантированную
@@ -242,14 +244,14 @@
                     ПЕРСОНАЛЬНЫХ ДАННЫХ
                 </label>
             </div>
-        </div>
+        </section>
     </main>
 
     <main class="page-content" id="catalog">
-        <div class="page-content__top">
+        <div class="page-content__top big-head">
             <div class="container">
-                <h1 class="page-content__title">ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ</h1>
-                <p class="page-content__pagination">ГЛАВНАЯ / КАТАЛОГ / ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ</p>
+                <h1 class="page-content__title big-head__title">ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ</h1>
+                <p class="page-content__pagination big-head__hint">ГЛАВНАЯ / КАТАЛОГ / ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ</p>
             </div>
         </div>
 
@@ -395,11 +397,11 @@
         </div>
     </main>
 
-    <main class="section-content" id="specials">
-        <div class="section-top">
+    <main class="page-content" id="specials">
+        <div class="page-content__top big-head">
             <div class="container">
-                <h1 class="section-top__title">акции</h1>
-                <p class="section-top__text">ПОДРОБНОСТИ ПРОВЕДЕНИЯ АКЦИЙ УТОЧНЯЙТЕ У МЕНЕДЖЕРОВ</p>
+                <h1 class="page-content__title big-head__title">акции</h1>
+                <p class="page-content__text big-head__hint">ПОДРОБНОСТИ ПРОВЕДЕНИЯ АКЦИЙ УТОЧНЯЙТЕ У МЕНЕДЖЕРОВ</p>
             </div>
         </div>
 
@@ -464,7 +466,7 @@
             </div>
         </div>
 
-        <div class="red-form">
+        <section class="red-form">
             <div class="container">
                 <h3 class="red-form__title">ПОЛУЧИТЬ СКИДКУ ДО 30%</h3>
                 <p class="red-form__text read-text">Оформите заказ в первый день обращения и получите гарантированную
@@ -480,7 +482,104 @@
                     ПЕРСОНАЛЬНЫХ ДАННЫХ
                 </label>
             </div>
+        </section>
+    </main>
+
+    <main class="page-content about-page" id="about">
+        <div class="page-content__top about-page__top big-head">
+            <div class="container">
+                <h1 class="page-content__title big-head__title">О КОМПАНИИ</h1>
+                <div class="about-page__styling line-styling">
+                    <p class="about-page__text">Производство отечественных полиэтиленовых труб с немецкой
+                        надежностью. Уже 20 лет наши клиенты доверяют нам задачи по производству труб для всей России,
+                        СНГ и
+                        другим странам. </p>
+                </div>
+
+            </div>
         </div>
+
+        <section class="advantages-section about-page__advantages">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="advantage">
+                            <div class="advantage__icon">
+                                <i class="sprite sprite-handshake"></i>
+                            </div>
+                            <div class="advantage__content">
+                                <p class="advantage__name">с 1998 <span class="small">года</span></p>
+                                <p class="advantage__text read-text">Работаем на рынке производства полимерной продукции
+                                    с 1998 года.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="advantage__item">
+                            <div class="advantage__icon">
+                                <i class="sprite sprite-cogwheel"></i>
+                            </div>
+                            <div class="advantage__content">
+                                <p class="advantage__name">7000 <span class="small">кв.м</span></p>
+                                <p class="advantage__text read-text">Общая площадь складских помещений более 7000 кв.м
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="advantage__item">
+                            <div class="advantage__icon">
+                                <i class="sprite sprite-pipe"></i>
+                            </div>
+                            <div class="advantage__content">
+                                <p class="advantage__name">6000 <span class="small">тонн</span></p>
+                                <p class="advantage__text read-text">Объем выпускаемой продукции в год более 6000 тонн
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- О производстве -->
+        <!-- практичность... -->
+        <!-- география -->
+        <section class="reviews-block">
+            <div class="container">
+                <h2 class="big-up-title reviews-block__title">ОТЗЫВЫ</h2>
+                <article class="review reviews-block__item clearfix">
+                    <img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
+                        class="review__img img-responsive">
+                    <p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
+                    <p class="review__hint read-text">Трофимов Трофим Трофимович</p>
+                    <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо коммерческому
+                        отделу.Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                </article>
+                <div class="reviews-block__navigation fnavigation text-right">
+                    <div class="big-btn big-btn--red fnavigation__btn"><i class="sprite sprite-left-arrow"></i></div>
+                    <div class="big-btn big-btn--red fnavigation__btn"><i class="sprite sprite-right-arrow"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="red-form">
+            <div class="container">
+                <h3 class="red-form__title">ПОЛУЧИТЬ СКИДКУ ДО 30%</h3>
+                <p class="red-form__text read-text">Оформите заказ в первый день обращения и получите гарантированную
+                    скидку!</p>
+                <form action="" class="inl-form">
+                    <input type="text" placeholder="ИМЯ" class="inl-form__input">
+                    <input type="text" placeholder="ТЕЛЕФОН" class="inl-form__input">
+                    <button class="big-btn big-btn--blue inl-form__sendbtn">ОТПРАВИТЬ</button>
+                </form>
+                <label class="red-form__hint">
+                    <input type="checkbox" checked>
+                    ЗАПОЛНЯЯ ФОРМУ, ВЫ ДАЙЕТЕ СВОЕ СОГЛАСИЕ НА ИСПОЛЬЗОВАНИЕ И ОБРАБОТКУ
+                    ПЕРСОНАЛЬНЫХ ДАННЫХ
+                </label>
+            </div>
+        </section>
     </main>
 
     <footer class="footer">

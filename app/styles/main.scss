@@ -3,7 +3,6 @@
 @import 'footer';
 @import 'buttons';
 @import 'icons';
-
 $blue: #1665F1;
 $lightblue: #548FF7;
 $darkblue: #010B34;
@@ -12,7 +11,6 @@ $blend: #E7EFFD;
 $dark: #3A3F49;
 $black: #030303;
 $white: #FFFFFF;
-
 /* main-content */
 
 .main-content {
@@ -59,20 +57,26 @@ $white: #FFFFFF;
 /* advantages-section */
 
 .advantages-section {
-    &__icon {
-        float: left;
-        margin-right: 20px;
-    }
-    &__content {
-        padding-left: 90px;
-    }
-    &__name {
-        font-size: 20px;
-        color: $black;
-    }
-    &__text {
-        line-height: 24px;
-        font-size: 18px;
+    .advantage {
+        &__icon {
+            float: left;
+            margin-right: 20px;
+        }
+        &__content {
+            padding-left: 90px;
+        }
+        &__name {
+            font-size: 20px;
+            color: $black;
+
+            &--small {
+                
+            }
+        }
+        &__text {
+            line-height: 24px;
+            font-size: 18px;
+        }
     }
 }
 
@@ -123,8 +127,8 @@ $white: #FFFFFF;
 
 /* section-content */
 
-.section-content {
-    .section-top {
+.page-content {
+    &__top {
         position: relative;
         padding: 80px;
         background-image: url(../images/bg/sectbg.jpg);
@@ -142,22 +146,22 @@ $white: #FFFFFF;
             z-index: 0;
             background: rgba($darkblue, 0.66);
         }
-        &__title {
-            position: relative;
-            z-index: 1;
-            text-transform: uppercase;
-            line-height: 60px;
-            font-size: 50px;
-            color: $white;
-        }
-        &__text {
-            position: relative;
-            text-transform: uppercase;
-            z-index: 1;
-            font-size: 18px;
-            color: $white;
-            opacity: 0.5;
-        }
+    }
+    &__title {
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+        line-height: 60px;
+        font-size: 50px;
+        color: $white;
+    }
+    &__text {
+        position: relative;
+        text-transform: uppercase;
+        z-index: 1;
+        font-size: 18px;
+        color: $white;
+        opacity: 0.5;
     }
 }
 
