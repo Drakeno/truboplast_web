@@ -58,15 +58,24 @@ body {
     }
 }
 
+.line-styling-right {
+    position: relative;
+    z-index: 1;
+    &::before {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        right: 10px;
+        top: 10px;
+        width: 63px;
+        height: 6px;
+        background: $blue;
+    }
+}
+
 .big-head {
-    &__title {
-
-    }
-
-    &__subtitle {
-
-    }
-
+    &__title {}
+    &__subtitle {}
     &__hint {
         
     }
@@ -78,4 +87,6 @@ body {
     color: $black;
 }
 
-.big-subtitle {}
+.big-subtitle {
+
+}
