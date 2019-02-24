@@ -4,7 +4,7 @@
 .header {
   border-bottom: 1px solid #979797;
   .navigation {
-      margin: 0;
+    margin: 0;
     background: $white;
     border: none;
     border-radius: 0;
@@ -29,6 +29,9 @@
           background: $white !important;
           color: $dark !important;
           border-color: $lightblue;
+        }
+        &.phone-link {
+          border: none;
         }
       }
       &.active>a {

@@ -1,49 +1,66 @@
 @import 'extra';
-
 .big-btn {
-    font-size: 18px;
-    margin: 15px;
-    height: 72px;
-    padding-left: 60px;
-    padding-right: 60px;
-    box-sizing: border-box;
-    text-transform: uppercase;
-    box-sizing: border-box;
-    transition: ease-in .2s;
-    &--blue {
-        background: $blue !important;
-        color: $white !important;
-        border: 1px solid $blue;
-        &:hover {
-            color: $blue !important;
-            background: $white !important;
-            border-color: $lightblue;
-            text-decoration: none;
-        }
+  font-size: 18px;
+  margin: 15px;
+  height: 72px;
+  padding-left: 60px;
+  padding-right: 60px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  transition: ease-in .2s;
+  &--blue {
+    background: $blue !important;
+    color: $white !important;
+    border: 1px solid $blue;
+    &:hover {
+      color: $blue !important;
+      background: $white !important;
+      border-color: $lightblue;
+      text-decoration: none;
     }
-    &--red {
-        background: $red;
-        color: $white !important;
-        border: 1px solid $red;
-        &:hover {
-            color: $red !important;
-            background: $white !important;
-            text-decoration: none;
-        }
+  }
+  &--red {
+    background: $red;
+    color: $white !important;
+    border: 1px solid $red;
+    &:hover {
+      color: $red !important;
+      background: $white !important;
+      text-decoration: none;
     }
-    &--width-arrow {}
+  }
+  &--width-arrow {}
 }
 
 .fnavigation {
-    &__btn {
-        display: inline-block;
-        width: 80px;
-        height: 80px;
-        padding: 10px;
-        box-sizing: border-box;
-        line-height: 70px;
-        vertical-align: middle;
-        text-align: center;
-        margin-left: 30px;
+  &__btn {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+    line-height: 70px;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: 27px;
+    margin-right: 0;
+
+    &.swiper-button-disabled {
+        opacity: 0.6;
+        &:hover {
+            cursor: initial;
+            background: $red !important;
+        }
     }
+    &:hover:not(.swiper-button-disabled) {
+        cursor: pointer;
+      .sprite-white-left-arrow {
+        background-position: -191px -259px;
+      }
+      .sprite-white-right-arrow {
+        background-position: -250px -259px;
+      }
+    }
+  }
 }

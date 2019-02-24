@@ -265,7 +265,7 @@
                             <p class="review__hint read-text">Трофимов Трофим Трофимович</p>
                             <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
                                 коммерческому
-                                отделу.Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                                отделу. <br>Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
                         </div>
                         <div class="review reviews-block__item clearfix swiper-slide">
                             <img src="images/prod1.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
@@ -274,7 +274,7 @@
                             <p class="review__hint read-text">Иванов Иван Иванович</p>
                             <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
                                 коммерческому
-                                отделу.Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                                отделу. <br>Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
                         </div>
                         <div class="review reviews-block__item clearfix swiper-slide">
                             <img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
@@ -283,16 +283,17 @@
                             <p class="review__hint read-text">Трофимов Трофим Трофимович</p>
                             <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
                                 коммерческому
-                                отделу.Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                                отделу.<br>
+                                Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="reviews-block__navigation fnavigation text-right">
-                    <div class="big-btn big-btn--red fnavigation__btn fnavigation__btn--left"><i
-                            class="sprite sprite-left-arrow"></i></div>
                     <div class="big-btn big-btn--red fnavigation__btn fnavigation__btn--right"><i
-                            class="sprite sprite-right-arrow"></i></div>
+                            class="sprite sprite-white-left-arrow"></i></div>
+                    <div class="big-btn big-btn--red fnavigation__btn fnavigation__btn--left"><i
+                            class="sprite sprite-white-right-arrow"></i></div>
                 </div>
             </div>
         </section>
@@ -303,15 +304,17 @@
                 <p class="red-form__text read-text">Оформите заказ в первый день обращения и получите гарантированную
                     скидку!</p>
                 <form action="" class="inl-form">
-                    <input type="text" placeholder="ИМЯ" class="inl-form__input">
-                    <input type="text" placeholder="ТЕЛЕФОН" class="inl-form__input">
-                    <button class="big-btn big-btn--blue inl-form__sendbtn">ОТПРАВИТЬ</button>
+                    <div class="inl-form__group">
+                        <input type="text" placeholder="ИМЯ" class="inl-form__input">
+                        <input type="text" placeholder="ТЕЛЕФОН" class="inl-form__input">
+                        <button class="big-btn big-btn--blue inl-form__sendbtn">ОТПРАВИТЬ</button>
+                    </div>
+                    <input class="inl-form__checkbox" type="checkbox" id="agree_check" checked>
+                    <label class="inl-form__hint" for="agree_check">
+                        ЗАПОЛНЯЯ ФОРМУ, ВЫ ДАЙЕТЕ СВОЕ СОГЛАСИЕ НА ИСПОЛЬЗОВАНИЕ И ОБРАБОТКУ
+                        ПЕРСОНАЛЬНЫХ ДАННЫХ
+                    </label>
                 </form>
-                <label class="red-form__hint">
-                    <input type="checkbox" checked>
-                    ЗАПОЛНЯЯ ФОРМУ, ВЫ ДАЙЕТЕ СВОЕ СОГЛАСИЕ НА ИСПОЛЬЗОВАНИЕ И ОБРАБОТКУ
-                    ПЕРСОНАЛЬНЫХ ДАННЫХ
-                </label>
             </div>
         </section>
     </main>
@@ -680,22 +683,49 @@
         </section>
 
         <section class="reviews-block">
-            <div class="container">
-                <h2 class="big-up-title reviews-block__title">ОТЗЫВЫ</h2>
-                <article class="review reviews-block__item clearfix">
-                    <img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
-                        class="review__img img-responsive">
-                    <p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
-                    <p class="review__hint read-text">Трофимов Трофим Трофимович</p>
-                    <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо коммерческому
-                        отделу.Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
-                </article>
-                <div class="reviews-block__navigation fnavigation text-right">
-                    <div class="big-btn big-btn--red fnavigation__btn"><i class="sprite sprite-left-arrow"></i></div>
-                    <div class="big-btn big-btn--red fnavigation__btn"><i class="sprite sprite-right-arrow"></i></div>
+                <div class="container">
+                    <h2 class="big-up-title reviews-block__title">ОТЗЫВЫ</h2>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="review reviews-block__item clearfix swiper-slide">
+                                <img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
+                                    class="review__img img-responsive">
+                                <p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
+                                <p class="review__hint read-text">Трофимов Трофим Трофимович</p>
+                                <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
+                                    коммерческому
+                                    отделу. <br>Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                            </div>
+                            <div class="review reviews-block__item clearfix swiper-slide">
+                                <img src="images/prod1.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
+                                    class="review__img img-responsive">
+                                <p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
+                                <p class="review__hint read-text">Иванов Иван Иванович</p>
+                                <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
+                                    коммерческому
+                                    отделу. <br>Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                            </div>
+                            <div class="review reviews-block__item clearfix swiper-slide">
+                                <img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
+                                    class="review__img img-responsive">
+                                <p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
+                                <p class="review__hint read-text">Трофимов Трофим Трофимович</p>
+                                <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
+                                    коммерческому
+                                    отделу.<br>
+                                    Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="reviews-block__navigation fnavigation text-right">
+                        <div class="big-btn big-btn--red fnavigation__btn fnavigation__btn--right"><i
+                                class="sprite sprite-white-left-arrow"></i></div>
+                        <div class="big-btn big-btn--red fnavigation__btn fnavigation__btn--left"><i
+                                class="sprite sprite-white-right-arrow"></i></div>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
         <section class="red-form">
             <div class="container">
@@ -823,7 +853,7 @@
     <footer class="footer">
         <div class="container">
             <div class="row footer__wrap">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <ul class="footer__menu">
                         <li><a href="#">Каталог</a></li>
                         <li><a href="#">О компании</a></li>
@@ -832,36 +862,42 @@
                         <li><a href="#">Контакты</a></li>
                     </ul>
                 </div>
-                <div class="col-md-3">
-                    <div class="phone-footer">
-                        <p class="phone-footer__hint">Офис</p>
-                        <a class="phone-footer__link">8 (843) 233-44-39</a>
+                <div class="col-md-7 footer__special-right-padding">
+                    <div class="footer__contacts">
+                        <div class="footer__block">
+                            <div class="phone-footer">
+                                <p class="phone-footer__hint">Офис</p>
+                                <a class="phone-footer__link" href="tel:+78432334439">8 (843) 233-44-39</a>
+                            </div>
+                            <p class="footer__text">
+                                Адрес:<br>
+                                420054,Татарстан, г. Казань, ул. Ямашева,<br>
+                                д.35а
+                            </p>
+                        </div>
+                        <div class="footer__block">
+                            <div class="phone-footer">
+                                <p class="phone-footer__hint">Производство</p>
+                                <a class="phone-footer__link" href="tel:+78007007080">8 (800) 700-70-80</a>
+                            </div>
+                            <p class="footer__text">
+                                Адрес:<br>
+                                422527, г.Казань, ул.Автосервисная,<br>
+                                дом 25А
+                            </p>
+                        </div>
                     </div>
-                    <p class="footer__text">
-                        Адрес:<br>
-                        420054,Татарстан, г. Казань, ул. Ямашева,<br>
-                        д.35а
-                    </p>
-                </div>
-                <div class="col-md-3">
-                    <div class="phone-footer">
-                        <p class="phone-footer__hint">Офис</p>
-                        <a class="phone-footer__link">8 (843) 233-44-39</a>
-                    </div>
-                    <p class="footer__text">
-                        Адрес:<br>
-                        422527, г.Казань, ул.Автосервисная,<br>
-                        дом 25А
-                    </p>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-7">
                     <p class="footer__text">© 2019 Группа компаний Трубопласт</p>
                 </div>
-                <div class="col-md-6">
-                    <a href="/8" class="footer__text footer__text--link">Политика конфиденциальности</a>
+                <div class="col-md-5">
+                    <div class="text-right">
+                        <a href="/8" class="footer__text footer__text--link">Политика конфиденциальности</a>
+                    </div>
                 </div>
             </div>
         </div>
