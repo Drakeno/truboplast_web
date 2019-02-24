@@ -40,12 +40,10 @@
         2. Каталог ведь будет выпадающий многоуровневый?
         3. Че за иконка телефона
         4. Схема проезда куда ведет и что делает в контактах
-        5. Клиенты это ссылки или так, картиночки в слайдере?
+        5. Клиенты это ссылки или так, картиночки в слайдере? И это карусель или стрелка в раздел какой-нибудь? 
+        Если слайдер, то как делать стрелку слева при прокрутке
 
-        18.02 Затратил: 1,5 часа. Разметка хедера, предусмотрительная установка базовых библиотек и скриптов.
-        19.02 затратил 3 часа
-        20.02 затратил 2 часа
-        21.02 затратил 3.5 часа
+
     -->
 
     <header class="header">
@@ -168,14 +166,14 @@
         <section class="production-block">
             <div class="container">
                 <h2 class="big-up-title production-block__title">МЫ ПРОИЗВОДИМ:</h2>
-                <div class="row">
+                <div class="production-block__wrap clearfix">
                     <article class="item-card">
                         <a href="" class="item-card__link"></a>
                         <div class="item-card__img-wrap">
-                            <img src="images/items/item1.png" alt="item1">
+                            <img src="images/items/item4.png" alt="item1">
                         </div>
                         <h3 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
+                            <a href="#">ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ</a>
                         </h3>
                     </article>
                     <article class="item-card">
@@ -184,7 +182,7 @@
                             <img src="images/items/item2.png" alt="item1">
                         </div>
                         <h3 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
+                            <a href="#">ТРУБЫ ДЛЯ ГАЗОСНАБЖЕНИЯ</a>
                         </h3>
                     </article>
                     <article class="item-card">
@@ -193,21 +191,24 @@
                             <img src="images/items/item3.png" alt="item1">
                         </div>
                         <h3 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
+                            <a href="#">ТРУБЫ ПРОЧИХ ИНЖЕНЕРНО-
+                                ТЕХНИЧЕСКИХ НАЗНАЧЕНИЙ</a>
                         </h3>
                     </article>
                     <article class="item-card">
                         <a href="" class="item-card__link"></a>
                         <div class="item-card__img-wrap">
-                            <img src="images/items/item4.png" alt="item1">
+                            <img src="images/items/item1.png" alt="item1">
                         </div>
                         <h3 class="item-card__title">
-                            <a href="#">ТРУБА ПЭ-100 SDR 17.6 со скидкой 25%</a>
+                            <a href="#">ФИТИНГИ ДЛЯ ПОЛЛИЭТИЛЕНОВЫХ ТРУБ</a>
                         </h3>
                     </article>
                 </div>
+
                 <div class="text-right">
-                    <a href="" class="big-btn big-btn--red production-block__btn">ПОДРОБНЕЕ</a>
+                    <a href="" class="big-btn big-btn--red production-block__btn">ПОДРОБНЕЕ <i
+                            class="sprite sprite-small-white-right-arrow"></i></a>
                 </div>
             </div>
         </section>
@@ -216,27 +217,37 @@
             <div class="container">
                 <h2 class="big-up-title clients-block__title">КЛИЕНТЫ</h2>
                 <p class="clients-block__text read-text">Наша продукция использовалась при строительстве объектов:</p>
-                <div class="clients-block__items">
-                    <div class="clients-block__item">
-                        <img src="images/partners/c-logo-1.png" alt="asd">
-                    </div>
-                    <div class="clients-block__item">
-                        <img src="images/partners/c-logo-11.png" alt="asd">
-                    </div>
-                    <div class="clients-block__item">
-                        <img src="images/partners/c-logo-2.png" alt="asd">
-                    </div>
-                    <div class="clients-block__item">
-                        <img src="images/partners/c-logo-3_1.png" alt="asd">
-                    </div>
-                    <div class="clients-block__item">
-                        <img src="images/partners/c-logo-9.png" alt="asd">
-                    </div>
-                    <div class="clients-block__navigation">
-                        <i class="sprite sprite-left-arrow"></i>
-                        <i class="sprite sprite-right-arrow"></i>
-                    </div>
+                <div class="clients-block__items swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="clients-block__item swiper-slide">
+                            <img src="images/partners/c-logo-9.png" alt="asd" class="img-responsive">
+                        </div>
+                        <div class="clients-block__item swiper-slide">
+                            <img src="images/partners/c-logo-1.png" alt="asd" class="img-responsive">
+                        </div>
+                        <div class="clients-block__item swiper-slide">
+                            <img src="images/partners/Logoprintrus.png" alt="asd" class="img-responsive">
+                        </div>
+                        <div class="clients-block__item swiper-slide">
+                            <img src="images/partners/агросила.png" alt="asd" class="img-responsive">
+                        </div>
+                        <div class="clients-block__item swiper-slide">
+                            <img src="images/partners/Tatnefpng.png" alt="asd" class="img-responsive">
+                        </div>
+                        <div class="clients-block__item swiper-slide">
+                            <img src="images/partners/c-logo-9.png" alt="asd" class="img-responsive">
+                        </div>
+                        <div class="clients-block__item swiper-slide">
+                            <img src="images/partners/c-logo-9.png" alt="asd" class="img-responsive">
+                        </div>
 
+                        <div class="clients-block__item swiper-slide">
+                            <img src="images/partners/c-logo-9.png" alt="asd" class="img-responsive">
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                 </div>
 
             </div>
@@ -245,17 +256,43 @@
         <section class="reviews-block">
             <div class="container">
                 <h2 class="big-up-title reviews-block__title">ОТЗЫВЫ</h2>
-                <article class="review reviews-block__item clearfix">
-                    <img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
-                        class="review__img img-responsive">
-                    <p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
-                    <p class="review__hint read-text">Трофимов Трофим Трофимович</p>
-                    <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо коммерческому
-                        отделу.Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
-                </article>
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="review reviews-block__item clearfix swiper-slide">
+                            <img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
+                                class="review__img img-responsive">
+                            <p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
+                            <p class="review__hint read-text">Трофимов Трофим Трофимович</p>
+                            <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
+                                коммерческому
+                                отделу.Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                        </div>
+                        <div class="review reviews-block__item clearfix swiper-slide">
+                            <img src="images/prod1.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
+                                class="review__img img-responsive">
+                            <p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
+                            <p class="review__hint read-text">Иванов Иван Иванович</p>
+                            <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
+                                коммерческому
+                                отделу.Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                        </div>
+                        <div class="review reviews-block__item clearfix swiper-slide">
+                            <img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
+                                class="review__img img-responsive">
+                            <p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
+                            <p class="review__hint read-text">Трофимов Трофим Трофимович</p>
+                            <p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
+                                коммерческому
+                                отделу.Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="reviews-block__navigation fnavigation text-right">
-                    <div class="big-btn big-btn--red fnavigation__btn"><i class="sprite sprite-left-arrow"></i></div>
-                    <div class="big-btn big-btn--red fnavigation__btn"><i class="sprite sprite-right-arrow"></i></div>
+                    <div class="big-btn big-btn--red fnavigation__btn fnavigation__btn--left"><i
+                            class="sprite sprite-left-arrow"></i></div>
+                    <div class="big-btn big-btn--red fnavigation__btn fnavigation__btn--right"><i
+                            class="sprite sprite-right-arrow"></i></div>
                 </div>
             </div>
         </section>

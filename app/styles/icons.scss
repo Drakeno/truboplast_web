@@ -75,8 +75,13 @@
 .sprite-left-arrow {
     width: 41px;
     height: 22px;
-    background-position: -245px -150px;
-    transform: rotate(180deg)
+    background-position: -245px -179px;
+}
+
+.sprite-small-white-right-arrow {
+    width: 26px;
+    height: 14px;
+    background-position: -245px -209px;
 }
 
 .sprite-shield {
