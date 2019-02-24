@@ -14,6 +14,7 @@ $white: #FFFFFF;
 /* main-content */
 
 .main-content {
+  overflow: hidden;
   &__image {
     position: relative;
     padding: 52px;
@@ -62,7 +63,8 @@ $white: #FFFFFF;
 /* advantages-section */
 
 .advantages-section {
-  margin: 60px 0;
+  padding: 60px 0;
+  background: $blendbg;
   .advantage {
     margin-right: 20px;
     &__icon {
@@ -120,7 +122,7 @@ $white: #FFFFFF;
   margin-top: 34px;
   padding-top: 63px;
   padding-bottom: 29px;
-  background: #F8F9FA;
+  background: $blendbg;
   &__title {
     margin-bottom: 20px;
   }
@@ -224,6 +226,7 @@ $white: #FFFFFF;
 /* section-content */
 
 .page-content {
+  overflow: hidden;
   &__top {
     position: relative;
     padding: 80px;
