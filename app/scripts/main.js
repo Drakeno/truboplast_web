@@ -1,8 +1,8 @@
 $(document).ready(function () {
   $("main").each(function () {
     $(this).hide();
-    $("#main-page").show();
   });
+  $("#catalog").show();
   $(".navigation__list-item").each(function () {
     if ($(this).hasClass("active")) {
       var neededId = $(this).attr("href");
