@@ -15,6 +15,7 @@
     <!-- build:css styles/core.css -->
     <link rel="stylesheet" href="/node_modules/bootstrap3/dist/css/bootstrap.min.css" type="text/css" />
     <link rel="stylesheet" href="/node_modules/swiper/dist/css/swiper.min.css" type="text/css" />
+    <link rel="stylesheet" href="/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.css" type="text/css" />
     <!-- endbuild -->
 
     <!--[if lte IE 8]>
@@ -38,12 +39,16 @@
     <!--
         1. Почему у телефона в хедере синяя стрелочка вниз справа. Ссылка должна куда-то физически скроллить, что-то должно выпадать?
         2. Каталог ведь будет выпадающий многоуровневый?
-        3. Че за иконка телефона
-        4. Схема проезда куда ведет и что делает в контактах
-        5. Клиенты это ссылки или так, картиночки в слайдере? И это карусель или стрелка в раздел какой-нибудь? 
-        Если слайдер, то как делать стрелку слева при прокрутке
+        --У меня было два варианта:
+            Сделать страничку "каталог", котороя будет полностью копировать блок "каталог" с главной. Она является лишним действием и как будто бы можно обойтись без нее.
 
+        Вариант номер два:
+            Не делать отдельную страничку "каталог", а сделать так, чтобы пользователь попадал в разделы (водоснабжение, газоснабжение, и т.д) через выпадающее меню,
+            либо с главной с блока "каталог"
+        4. Схема проезда куда ведет и что делает в контактах
+        --Есть картинка со схемой проезда. Будет достаточно, если по клику будет открываться поп-ап окно со схемой.
         6. В характеристиках в деталях товара синяя полоска является частью эффекта при наведении? или нет
+        --Просто карусель. Можно сделать только одну, клиентов там не много будет, пусть листаются в одну сторону.
     -->
 
     <header class="header">
@@ -114,11 +119,6 @@
 
         <section class="advantages-section">
             <div class="container">
-                <div class="call-btn-cont">
-                    <div class="call-btn">
-                        <img src="images/icons/Shape.png" alt="Телефон">
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="advantage">
@@ -422,15 +422,17 @@
             <div class="details__help help-hint">
                 <div class="container">
                     <h3 class="big-subtitle help-hint__title">НЕ НАШЛИ НУЖНЫЙ РАЗМЕР?</h3>
-                    <div class="help-hint__wrap">
+                    <div class="help-hint__wrap clearfix">
                         <div class="help-hint__info">
                             <p class="help-hint__text read-text">Производим все типы и размеры полиэтиленовых труб.
-                                 Индивидуальный подход к каждому клиенту. Звоните!</p>
+                                <br>Так же производим трубы по нестандартным размерам.
+                                <br> Индивидуальный подход к каждому
+                                клиенту. Звоните!</p>
                         </div>
                         <div class="help-hint__contacts">
                             <p class="help-hint__name">ОТДЕЛ ПРОДАЖ</p>
                             <a class="help-hint__value help-hint__value--phone"
-                                href="tel:+78007007080">8-800-700-70-80</a>
+                                href="tel:+78007007080">8-800-700-70-80</a><br>
                             <a class="help-hint__value help-hint__value--email"
                                 href="mailto:truba@list.ru">truba@list.ru</a>
                         </div>
@@ -763,7 +765,7 @@
                     <p class="contacts__hint read-text">ПРОИЗВОДСТВО</p>
                     <a href="tel:+78435172767" class="contacts__big-text">422527, г.Казань, ул.Автосервисная, дом
                         25А</a>
-                    <a href="#" class="contacts__link">Схема проезда</a>
+                    <a href="images/items/item4.png" class="contacts__link" data-fancybox>Схема проезда</a>
                 </div>
                 <div class="contacts__block">
                     <p class="contacts__hint read-text">ОФИС</p>
@@ -902,10 +904,13 @@
         </div>
     </footer>
 
-    <!-- build:js scripts/vendor.js -->
+    <!-- build:js scripts/jquery.min.js -->
     <script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor.js -->
     <script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="/node_modules/swiper/dist/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
