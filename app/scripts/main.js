@@ -2,7 +2,7 @@ $(document).ready(function () {
   $("main").each(function () {
     $(this).hide();
   });
-  $("#catalog").show();
+  $("#contacts").show();
   $(".navigation__list-item").each(function () {
     if ($(this).hasClass("active")) {
       var neededId = $(this).attr("href");
@@ -29,21 +29,30 @@ $(document).ready(function () {
     $(this).addClass('s' + index);
   });
 
-  var swiper = new Swiper('.s0', {
+  var swiper = new Swiper('.clients-block .swiper-container', {
     slidesPerView: 6,
     spaceBetween: 10,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.clients-block .swiper-button-next',
+      prevEl: ' clients-block .swiper-button-prev',
     },
   });
 
-  var swiper2 = new Swiper('.s1', {
+  var swiper2 = new Swiper('.reviews-block .swiper-container', {
     spaceBetween: 100,
     effect: 'fade',
     navigation: {
-      nextEl: '.fnavigation__btn--right',
-      prevEl: '.fnavigation__btn--left',
+      nextEl: '.reviews-block .fnavigation__btn--right',
+      prevEl: '.reviews-block .fnavigation__btn--left',
+    },
+  });
+
+  var swiper3 = new Swiper('.details__docs .swiper-container', {
+    slidesPerView: 3,
+    spaceBetween: 33,
+    navigation: {
+      nextEl: '.docs__navigation .fnavigation__btn--right',
+      prevEl: '.docs__navigation .fnavigation__btn--left',
     },
   });
 });
