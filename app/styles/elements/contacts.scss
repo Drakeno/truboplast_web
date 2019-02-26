@@ -1,0 +1,73 @@
+.contacts {
+    padding-top: 53px;
+    &__row {
+        margin-top: 24px;
+    }
+    &__block {
+        float: left;
+        width: 50%;
+        margin-bottom: 34px;
+    }
+    &__section {
+        margin-bottom: 20px;
+    }
+    &__hint {
+        margin-bottom: 17px;
+        font-family: 'Open Sans';
+        line-height: normal;
+        font-weight: bold;
+        font-size: 16px;
+        color: $red;
+    }
+    &__big-text {
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 1px;
+        color: #000000;
+    }
+    &__link {
+        display: block;
+        margin-top: 20px;
+        color: $blue;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    &__map {
+        padding-top: 28px;
+        padding-bottom: 61px;
+    }
+    &__subtitle {
+        margin-bottom: 23px;
+        font-size: 24px;
+        letter-spacing: 1px;
+        color: $red;
+    }
+    &__name {
+        margin-bottom: 4px;
+        font-family: 'Open Sans';
+        letter-spacing: 0;
+        line-height: 27px;
+        font-size: 20px;
+        color: #000000;
+    }
+    &__position {
+        font-family: 'Open Sans';
+        letter-spacing: 0;
+        font-style: italic;
+        font-weight: normal;
+        line-height: 24px;
+        font-size: 18px;
+        color: #000000;
+    }
+    &__data {
+        font-family: 'Open Sans';
+        margin-top: 10px;
+        letter-spacing: 0;
+        line-height: 24px;
+        font-size: 18px;
+        color: #000000;
+    }
+    .red-form {
+        margin-top: 68px;
+    }
+}
