@@ -1,0 +1,57 @@
+.page-content {
+    overflow: hidden;
+    &__top {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 43px;
+        background-image: url(../images/bg/sectbg.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 0;
+            background: rgba($darkblue, 0.66);
+        }
+    }
+    &__title-wrap {
+        display: block;
+        line-height: 147px;
+        min-height: 186px;
+    }
+    &__title {
+        display: inline-block;
+        vertical-align: bottom;
+        max-width: 800px;
+        position: relative;
+        z-index: 1;
+        text-transform: uppercase;
+        line-height: 60px;
+        font-size: 50px;
+        letter-spacing: 1px;
+        color: $white;
+    }
+    &__pagination {
+        margin-left: 9px;
+        font-size: 18px;
+        color: $white;
+        opacity: 0.5;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 1;
+    }
+    &__text {
+        position: relative;
+        text-transform: uppercase;
+        z-index: 1;
+        font-size: 18px;
+        color: $white;
+        opacity: 0.5;
+    }
+}

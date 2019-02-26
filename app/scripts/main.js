@@ -1,8 +1,4 @@
 $(document).ready(function () {
-  $("main").each(function () {
-    $(this).hide();
-  });
-  $("#contacts").show();
   $(".navigation__list-item").each(function () {
     if ($(this).hasClass("active")) {
       var neededId = $(this).attr("href");
@@ -38,7 +34,16 @@ $(document).ready(function () {
     },
   });
 
-  var swiper2 = new Swiper('.reviews-block .swiper-container', {
+  var swiper2 = new Swiper('.reviews-block.s1 .swiper-container', {
+    spaceBetween: 100,
+    effect: 'fade',
+    navigation: {
+      nextEl: '.reviews-block .fnavigation__btn--right',
+      prevEl: '.reviews-block .fnavigation__btn--left',
+    },
+  });
+
+  var swiper22 = new Swiper('.reviews-block.s2 .swiper-container', {
     spaceBetween: 100,
     effect: 'fade',
     navigation: {
@@ -55,4 +60,9 @@ $(document).ready(function () {
       prevEl: '.docs__navigation .fnavigation__btn--left',
     },
   });
+
+  $("main").each(function () {
+    $(this).hide();
+  });
+  $("#contacts").show();
 });

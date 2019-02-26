@@ -1,0 +1,25 @@
+.production-block {
+    padding-top: 35px;
+    padding-bottom: 70px;
+    &__wrap {
+        margin-top: 45px;
+        margin-bottom: 60px;
+    }
+    &__btn {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        padding-left: 58px;
+        padding-right: 54px;
+        margin-right: 0;
+        letter-spacing: 0;
+        .sprite-small-white-right-arrow {
+            margin-left: 2px;
+        }
+        &:hover {
+            .sprite-small-white-right-arrow {
+                background-position: -273px -209px;
+                transition: .2s all;
+            }
+        }
+    }
+}

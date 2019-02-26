@@ -1,0 +1,25 @@
+.docs {
+    &__wrap {
+        padding-top: 45px;
+        padding-bottom: 18px;
+    }
+    &__item {
+        text-align: center;
+    }
+    &__item:hover {
+        .docs__text {
+            opacity: 1;
+        }
+    }
+    &__text {
+        margin-right: 33px;
+        margin-top: 36px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        color: #000000;
+        opacity: 0.6;
+    }
+    &__navigation {
+        margin-right: 60px;
+    }
+}

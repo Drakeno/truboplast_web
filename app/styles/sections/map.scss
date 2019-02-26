@@ -1,0 +1,23 @@
+.map {
+    padding-top: 55px;
+    padding-bottom: 77px;
+    background-color: $dark;
+    color: #FFFFFF;
+    &__title {
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+    &__hint {
+        display: inline-block;
+        margin-top: 12px;
+        max-width: 580px;
+        line-height: 33px;
+        font-size: 24px;
+        color: #FFFFFF;
+        text-align: left;
+    }
+    &__img {
+        margin-top: 15px;
+        margin-bottom: -9px;
+    }
+}

@@ -1,0 +1,24 @@
+.item-detail {
+    &__title {
+        margin-bottom: 31px;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 1px;
+        color: #000000;
+        max-width: 700px;
+    }
+    &__row {}
+    &__content {}
+    &__img {
+        padding-top: 11px;
+    }
+    &__caption {
+        font-size: 24px;
+        line-height: 31px;
+        margin-bottom: 25px;
+    }
+    &__text {
+        font-size: 18px;
+        line-height: 25px;
+    }
+}

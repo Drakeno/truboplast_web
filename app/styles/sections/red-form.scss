@@ -1,0 +1,90 @@
+.red-form {
+    padding-top: 92px;
+    padding-bottom: 72px;
+    background: $red;
+    color: $white;
+    &__title {
+        margin-bottom: 21px;
+        letter-spacing: 1px;
+        font-size: 62px;
+        color: $white;
+        text-transform: uppercase;
+    }
+    &__text {
+        color: $white;
+        font-size: 20px;
+    }
+    &__hint {
+        font-size: 14px;
+        color: rgba($blend, 0.63);
+    }
+    .inl-form {
+        margin-top: 46px;
+        &__group {
+            margin-bottom: 23px;
+        }
+        &__input {
+            border: none;
+            min-width: 320px;
+            margin-right: 26px;
+            padding: 25px;
+            height: 75px;
+            font-size: 18px;
+            color: $dark;
+            box-sizing: border-box;
+            &::placeholder {
+                color: rgba($dark, 0.3);
+            }
+        }
+        .big-btn {
+            padding: 0px 62px;
+            margin-right: 0;
+            margin-left: 0;
+        }
+        &__hint {
+            color: rgba($blend, 0.6);
+            margin-left: 10px;
+            letter-spacing: 0;
+            font-weight: normal;
+        }
+        &__checkbox {
+            &:not(:checked),
+            &:checked {
+                position: absolute;
+                left: -9999px;
+                &+label {
+                    position: relative;
+                    padding-left: 1.95em;
+                    cursor: pointer;
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: -8px;
+                        top: -1px;
+                        width: 20px;
+                        height: 20px;
+                        background: $blend;
+                    }
+                    &:after {
+                        content: '\2713';
+                        position: absolute;
+                        font-size: 30px;
+                        top: -15px;
+                        left: -8px;
+                        color: $black;
+                        transition: all .2s;
+                    }
+                }
+            }
+            /* checked mark aspect changes */
+            &:not(:checked)+label:after {
+                opacity: 0;
+                transform: scale(0);
+            }
+            &:checked+label:after {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+}
