@@ -32,6 +32,13 @@ $(document).ready(function () {
       nextEl: '.clients-block .swiper-button-next',
       prevEl: ' clients-block .swiper-button-prev',
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+        slidesPerColumn: 2,
+        spaceBetween: 10,
+      },
+    }
   });
 
   var swiper2 = new Swiper('.reviews-block.s1 .swiper-container', {
@@ -59,10 +66,16 @@ $(document).ready(function () {
       nextEl: '.docs__navigation .fnavigation__btn--right',
       prevEl: '.docs__navigation .fnavigation__btn--left',
     },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+      },
+    }
   });
 
   $("main").each(function () {
     $(this).hide();
   });
-  $("#contacts").show();
+  $("#catalog").show();
 });

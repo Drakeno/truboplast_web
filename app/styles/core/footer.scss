@@ -1,69 +1,67 @@
 @import 'extra';
 .footer {
-  color: $white;
-  background: $dark;
-  &__wrap {
+    color: $white;
+    background: $dark;
     padding: 110px 0;
     padding-bottom: 72px;
-  }
-  &__contacts {
-    padding-left: 52px;
-  }
-  &__block {
-    float: left;
-    max-width: 230px;
-    &:nth-child(2n+1) {
-      margin-right: 34px;
+    &__contacts {
+        padding-left: 52px;
     }
-  }
-  &__menu {
-    list-style: none;
-    padding-left: 0;
-    letter-spacing: 0;
-    li {
-      margin-bottom: 15px;
-      &>a {
-        color: $white;
-        opacity: 0.5;
-        font-size: 18px;
-        text-transform: uppercase;
-        &:hover {
-          opacity: 1;
-          text-decoration: none;
+    &__block {
+        float: left;
+        max-width: 230px;
+        &:nth-child(2n+1) {
+            margin-right: 34px;
         }
-      }
     }
-  }
-  &__special-right-padding {
-    padding-right: 0;
-  }
-  .phone-footer {
-    margin-top: 3px;
-    margin-bottom: 38px;
-    &__hint {
-      font-size: 18px;
-      margin-bottom: -4px;
+    &__menu {
+        list-style: none;
+        padding-left: 0;
+        letter-spacing: 0;
+        li {
+            margin-bottom: 15px;
+            &>a {
+                color: $white;
+                opacity: 0.5;
+                font-size: 18px;
+                text-transform: uppercase;
+                &:hover {
+                    opacity: 1;
+                    text-decoration: none;
+                }
+            }
+        }
     }
-    &__link {
-      color: $white;
-      font-size: 22px;
-      &:hover {
-        text-decoration: none;
-      }
+    &__special-right-padding {
+        padding-right: 0;
     }
-  }
-  &__text {
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0;
-    opacity: 0.5;
-    &--link {
-      color: $white;
-      &:hover {
-        color: $white;
-        opacity: 1;
-        text-decoration: none;
-      }
+    .phone-footer {
+        margin-top: 3px;
+        margin-bottom: 38px;
+        &__hint {
+            font-size: 18px;
+            margin-bottom: -4px;
+        }
+        &__link {
+            color: $white;
+            font-size: 22px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
-  }
+    &__text {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0;
+        opacity: 0.5;
+        &--link {
+            color: $white;
+            &:hover {
+                color: $white;
+                opacity: 1;
+                text-decoration: none;
+            }
+        }
+    }
 }

@@ -56,15 +56,20 @@
 			<nav class="navbar navbar-default navigation" role="navigation">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse"
+					<button type="button" class="navbar-toggle navigation__btn-sm" data-toggle="collapse"
 						data-target="#bs-navbar-collapse">
 						<span class="sr-only">Открыть меню</span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navigation__logo" href="/"><img src="images/logo.png" class="img-responsive"
+					<a class="navigation__logo hidden-xs" href="/"><img src="images/logo.png" class="img-responsive"
 							alt="Логотип"></a>
+					<a class="navigation__logo-sm visible-xs" href="/"><img src="images/logo-sm.png"
+							class="img-responsive" alt="Логотип"></a>
+					<a class="navigation__phone-sm visible-xs" href="tel:+78007007080">8-800-700-70-80<br>
+						<span class="phone-hint">Звонок бесплатный по РФ</span>
+					</a>
 				</div>
 
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -75,13 +80,13 @@
 						<li class="navigation__list-item"><a href="about">О компании</a></li>
 						<li class="navigation__list-item"><a href="specials">Акции</a></li>
 						<li class="navigation__list-item"><a href="contacts">Контакты</a></li>
-						<li class="navigation__list-item navigation__phone">
+						<li class="navigation__list-item navigation__phone hidden-xs">
 							<a class="phone-link" href="tel:+78007007080">8-800-700-70-80<br>
 								<span class="phone-hint">Звонок бесплатный по РФ</span>
 							</a>
 
 						</li>
-						<li class="navigation__largebtn">
+						<li class="navigation__largebtn hidden-xs">
 							<a class="big-btn big-btn--blue" href="#">Заказать</a>
 						</li>
 						<!-- <li class="dropdown">
@@ -107,7 +112,8 @@
 		<div class="main-content__image big-head">
 			<div class="container">
 				<h1 class="main-content__title big-head__title">ПРОИЗВОДСТВО ПОЛИЭТИЛЕНОВЫХ ТРУБ</h1>
-				<p class="main-content__info big-head__subtitle">ДЛЯ ВОДОСНАБЖЕНИЯ, ГАЗОСНАБЖЕНИЯ И КАНАЛИЗАЦИИ</p>
+				<p class="main-content__info big-head__subtitle hidden-xs">ДЛЯ ВОДОСНАБЖЕНИЯ, ГАЗОСНАБЖЕНИЯ И
+					КАНАЛИЗАЦИИ</p>
 				<div class="main-content__styling-line line-styling">
 					<p class="main-content__text big-head__hint read-text">Наше производственное предприятие
 						специализируется на
@@ -117,7 +123,7 @@
 			</div>
 		</div>
 
-		<section class="advantages-section">
+		<section class="advantages-section hidden-xs">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-4">
@@ -206,7 +212,7 @@
 					</article>
 				</div>
 
-				<div class="text-right">
+				<div class="production-block__btn-wrap">
 					<a href="" class="big-btn big-btn--red production-block__btn">ПОДРОБНЕЕ <i
 							class="sprite sprite-small-white-right-arrow"></i></a>
 				</div>
@@ -262,7 +268,7 @@
 							<img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
 								class="review__img img-responsive">
 							<p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
-							<p class="review__hint read-text">Трофимов Трофим Трофимович</p>
+							<p class="review__hint read-text hidden-xs">Трофимов Трофим Трофимович</p>
 							<p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
 								коммерческому
 								отделу. <br>Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
@@ -271,7 +277,7 @@
 							<img src="images/prod1.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
 								class="review__img img-responsive">
 							<p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
-							<p class="review__hint read-text">Иванов Иван Иванович</p>
+							<p class="review__hint read-text hidden-xs">Иванов Иван Иванович</p>
 							<p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
 								коммерческому
 								отделу. <br>Помогли подобрать трубу. Через 36 часов уже была у меня на складе!»</p>
@@ -280,7 +286,7 @@
 							<img src="images/review.jpg" alt="Генеральный директор ПАО «ТАТНЕФТЬ»"
 								class="review__img img-responsive">
 							<p class="review__head line-styling read-text">Генеральный директор ПАО «ТАТНЕФТЬ»</p>
-							<p class="review__hint read-text">Трофимов Трофим Трофимович</p>
+							<p class="review__hint read-text hidden-xs">Трофимов Трофим Трофимович</p>
 							<p class="review__text read-text">«Быстро, качественно надежно! Отдельное спасибо
 								коммерческому
 								отделу.<br>
@@ -300,7 +306,7 @@
 
 		<section class="red-form">
 			<div class="container">
-				<h3 class="red-form__title">ПОЛУЧИТЬ СКИДКУ ДО 30%</h3>
+				<h3 class="red-form__title">ПОЛУЧИТЬ СКИДКУ <span class="hidden-xs">ДО 30%</span></h3>
 				<p class="red-form__text read-text">Оформите заказ в первый день обращения и получите гарантированную
 					скидку!</p>
 				<form action="" class="inl-form">
@@ -325,7 +331,8 @@
 				<div class="page-content__title-wrap">
 					<h1 class="page-content__title big-head__title">ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ</h1>
 				</div>
-				<p class="page-content__pagination big-head__hint">ГЛАВНАЯ / КАТАЛОГ / ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ</p>
+				<p class="page-content__pagination big-head__hint hidden-xs">ГЛАВНАЯ / КАТАЛОГ / ТРУБЫ ДЛЯ ВОДОСНАБЖЕНИЯ
+				</p>
 			</div>
 		</div>
 
@@ -336,7 +343,10 @@
 						<h2 class="item-detail__title">Напорные трубы ПЭ для сетей водоснабжения ГОСТ 18599-2001
 						</h2>
 						<div class="item-detail__row row clearfix">
-							<div class="item-detail__content col-md-7">
+							<div class="item-detail__img col-md-5 col-md-push-7">
+								<img src="images/detail1.jpg" alt="Детальная картинка" class="img-responsive">
+							</div>
+							<div class="item-detail__content col-md-7 col-md-pull-5">
 								<p class="item-detail__caption read-text"><b>Трубы из полиэтилена (ПЭ) более 50 лет
 										применяются во
 										всём
@@ -348,9 +358,6 @@
 									классификацией,
 									Группа ТРУБОПЛАСТ предлагает трубы ПЭ 80, ПЭ 100, а также трубы ПЭ 100+.
 								</p>
-							</div>
-							<div class="item-detail__img col-md-5">
-								<img src="images/detail1.jpg" alt="Детальная картинка" class="img-responsive">
 							</div>
 						</div>
 					</div>
@@ -938,7 +945,7 @@
 		<div class="container">
 			<div class="row footer__wrap">
 				<div class="col-md-5">
-					<ul class="footer__menu">
+					<ul class="footer__menu hidden-xs">
 						<li><a href="#">Каталог</a></li>
 						<li><a href="#">О компании</a></li>
 						<li><a href="#">Производство</a></li>
@@ -953,7 +960,7 @@
 								<p class="phone-footer__hint">Офис</p>
 								<a class="phone-footer__link" href="tel:+78432334439">8 (843) 233-44-39</a>
 							</div>
-							<p class="footer__text">
+							<p class="footer__text hidden-xs">
 								Адрес:<br>
 								420054,Татарстан, г. Казань, ул. Ямашева,<br>
 								д.35а
@@ -964,7 +971,7 @@
 								<p class="phone-footer__hint">Производство</p>
 								<a class="phone-footer__link" href="tel:+78007007080">8 (800) 700-70-80</a>
 							</div>
-							<p class="footer__text">
+							<p class="footer__text hidden-xs">
 								Адрес:<br>
 								422527, г.Казань, ул.Автосервисная,<br>
 								дом 25А
@@ -974,7 +981,7 @@
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row hidden-xs">
 				<div class="col-md-7">
 					<p class="footer__text">© 2019 Группа компаний Трубопласт</p>
 				</div>
@@ -982,6 +989,12 @@
 					<div class="text-right">
 						<a href="/8" class="footer__text footer__text--link">Политика конфиденциальности</a>
 					</div>
+				</div>
+			</div>
+			<div class="row visible-xs">
+				<div class="text-center">
+					<a href="/8" class="footer__text footer__text--link">Политика конфиденциальности</a>
+					<p class="footer__text">© 2019 Группа компаний Трубопласт</p>
 				</div>
 			</div>
 		</div>
