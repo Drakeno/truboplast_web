@@ -43,3 +43,36 @@
         overflow: visible;
     }
 }
+
+@media(max-width: 767px) {
+    .reviews-block {
+        padding-top: 63px;
+        padding-bottom: 49px;
+        &__item {
+            padding: 0 25px;
+        }
+        .review {
+            &__img {
+                float: none;
+            }
+            &__head {
+                line-height: 19px;
+                font-size: 14px;
+                &.line-styling {
+                    &::before {
+                        background: transparent;
+                    }
+                }
+            }
+            &__text {
+                line-height: 27px;
+                font-size: 14px;
+            }
+        }
+        &__navigation {
+            &.text-right {
+                text-align: center;
+            }
+        }
+    }
+}

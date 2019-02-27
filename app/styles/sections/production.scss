@@ -46,3 +46,35 @@
         color: #010101;
     }
 }
+
+@media(max-width: 767px) {
+    .production {
+        padding: 35px 0;
+        &__hint {
+            padding-left: 0;
+            &.line-styling::before {
+                display: none;
+            }
+        }
+        &__main-text {
+            font-size: 14px;
+            line-height: normal;
+        }
+        &__content {
+            padding-top: 0;
+        }
+        &__red-title {
+            font-size: 20px;
+        }
+        &__text {
+            font-size: 13px;
+            line-height: normal;
+        }
+        &__block {
+            margin-bottom: 35px;
+        }
+        &__detail {
+            margin-top: 35px;
+        }
+    }
+}

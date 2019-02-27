@@ -23,3 +23,22 @@
         margin-right: 60px;
     }
 }
+
+@media(max-width: 767px) {
+    .docs {
+        &__navigation {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &__wrap {
+            padding-top: 20px;
+        }
+        &__text {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        .img-responsive {
+            margin: 0 auto;
+        }
+    }
+}

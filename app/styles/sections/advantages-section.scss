@@ -32,3 +32,32 @@
         }
     }
 }
+
+@media(max-width: 991px) {
+    .advantages-section {
+        padding-top: 30px;
+        padding-bottom: 0;
+        .advantage {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .advantages-section {
+        padding-top: 30px;
+        padding-bottom: 0;
+        .advantage {
+            margin-right: 0;
+            margin-bottom: 30px;
+            &__big-name {
+                font-size: 20px;
+            }
+            &__text {
+                line-height: 19px;
+                font-size: 14px;
+                max-width: 100%;
+            }
+        }
+    }
+}

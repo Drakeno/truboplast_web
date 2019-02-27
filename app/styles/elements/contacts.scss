@@ -71,3 +71,21 @@
         margin-top: 68px;
     }
 }
+
+@media(max-width: 767px) {
+    .contacts {
+        padding-top: 35px;
+        &__map {
+            height: 100vh;
+        }
+        .red-form {
+            margin-top: 35px;
+        }
+        &__block {
+            width: 100%;
+        }
+        &__big-text {
+            font-size: 20px;
+        }
+    }
+}

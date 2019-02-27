@@ -26,3 +26,20 @@
         }
     }
 }
+
+@media(max-width: 767px) {
+    .production-block {
+        &__wrap {
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+        &__btn-wrap {
+            text-align: center;
+        }
+        &__btn {
+            width: 100%;
+            margin: 0;
+            text-align: center;
+        }
+    }
+}

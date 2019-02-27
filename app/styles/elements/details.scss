@@ -16,3 +16,19 @@
         padding-bottom: 49px;
     }
 }
+
+@media(max-width: 767px) {
+    .details {
+        &__head {
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+        &__numbers {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        &__help {
+            padding-top: 18px;
+        }
+    }
+}

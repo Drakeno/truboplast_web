@@ -108,3 +108,19 @@ body {
         box-shadow: 0 0 0 20px rgba($red, 0.5);
     }
 }
+
+@media(max-width: 767px) {
+    .big-up-title {
+        font-size: 24px;
+    }
+    .big-subtitle {
+        font-size: 24px;
+        line-height: normal;
+    }
+    .line-styling {
+        &::before {
+            left: 0px;
+            top: -21px;
+        }
+    }
+}

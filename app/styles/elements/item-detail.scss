@@ -22,3 +22,25 @@
         line-height: 25px;
     }
 }
+
+@media(max-width: 767px) {
+    .item-detail {
+        &__title {
+            line-height: normal;
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+        &__caption {
+            line-height: 22px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        &__text {
+            line-height: 25px;
+            font-size: 12px;
+        }
+        &__img {
+            padding-bottom: 12px;
+        }
+    }
+}

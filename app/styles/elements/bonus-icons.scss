@@ -22,3 +22,22 @@
         }
     }
 }
+
+@media(max-width: 991px) {
+    .bonus-icons {
+        &__item {
+            width: 49%;
+            margin-right: 0;
+        }
+        .bonus {
+            &__title {
+                line-height: 19px;
+                font-size: 16px;
+            }
+            &__text {
+                line-height: 19px;
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -7,13 +7,14 @@
         padding: 12px 0;
         padding-bottom: 13px;
         position: relative;
+        max-width: 861px;
         &:hover {
             background: $blendbg;
             &::before {
                 position: absolute;
                 z-index: 1;
                 content: '';
-                right: 49px;
+                right: -32px;
                 top: 25px;
                 width: 63px;
                 height: 6px;
@@ -23,7 +24,7 @@
     }
     &__name {
         margin-bottom: 0;
-        width: 50%;
+        width: 56%;
         float: left;
         font-weight: 600;
         line-height: 25px;
@@ -33,11 +34,26 @@
     }
     &__value {
         margin-bottom: 0;
-        width: 38%;
+        width: 42%;
         float: left;
         line-height: 25px;
         font-size: 18px;
         letter-spacing: 1px;
         color: #000000;
+    }
+}
+
+@media(max-width: 767px) {
+    .item-numbers {
+        &__body {
+            margin-top: 0;
+        }
+        &__name,
+        &__value {
+            width: 100%;
+            display: block;
+            line-height: 20px;
+            font-size: 14px;
+        }
     }
 }

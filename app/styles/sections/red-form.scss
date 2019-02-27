@@ -30,6 +30,7 @@
             padding: 25px;
             height: 75px;
             font-size: 18px;
+            background: #E8F0FC;
             color: $dark;
             box-sizing: border-box;
             &::placeholder {
@@ -84,6 +85,57 @@
             &:checked+label:after {
                 opacity: 1;
                 transform: scale(1);
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .red-form {
+        padding-top: 18px;
+        padding-bottom: 38px;
+        &__title {
+            font-size: 24px;
+            line-height: normal;
+            margin-bottom: 12px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: normal;
+        }
+        .inl-form {
+            &__input {
+                min-width: 100%;
+                width: 100%;
+                margin-bottom: 11px;
+            }
+            &__sendbtn {
+                margin-top: 5px;
+                margin-bottom: 24px;
+                width: 100%;
+            }
+            &__hint {
+                line-height: 14px;
+                font-size: 12px;
+            }
+            &__checkbox:checked+label {
+                padding-left: 36px;
+            }
+            &__checkbox {
+                &:not(:checked),
+                &:checked {
+                    &+label {
+                        padding-left: 36px;
+                        &:before {
+                            left: -2px;
+                            top: 3px;
+                        }
+                        &:after {
+                            top: 2px;
+                            left: 0px;
+                        }
+                    }
+                }
             }
         }
     }

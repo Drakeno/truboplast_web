@@ -77,5 +77,5 @@ $(document).ready(function () {
   $("main").each(function () {
     $(this).hide();
   });
-  $("#catalog").show();
+  $("#main-page").show();
 });

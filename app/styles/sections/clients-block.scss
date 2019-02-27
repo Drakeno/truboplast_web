@@ -31,6 +31,9 @@
                 transition: .2s all;
             }
         }
+        .swiper-button-prev {
+            display: none;
+        }
         .swiper-button-next {
             width: 41px;
             height: 22px;
@@ -51,6 +54,30 @@
             width: 105px;
             display: inline-block;
             vertical-align: middle;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .clients-block {
+        padding-top: 0;
+        margin-top: 23px;
+        &__title {
+            margin-bottom: 16px;
+        }
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        &__item {
+            height: 70px;
+            line-height: 83px;
+        }
+        &__items {
+            .swiper-button-next,
+            .swiper-button-prev {
+                opacity: 0 !important;
+            }
         }
     }
 }

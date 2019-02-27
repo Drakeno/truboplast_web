@@ -21,3 +21,14 @@
         margin-bottom: -9px;
     }
 }
+
+@media(max-width: 767px) {
+    .map {
+        padding-top: 35px;
+        padding-bottom: 35px;
+        &__hint {
+            font-size: 14px;
+            line-height: normal;
+        }
+    }
+}

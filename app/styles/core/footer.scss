@@ -64,4 +64,31 @@
             }
         }
     }
+    &__lastrow {
+        margin-top: 69px;
+    }
+}
+
+@media(max-width: 991px) {
+    .footer {
+        padding: 40px 0;
+        &__contacts {
+            padding-left: 0;
+        }
+        &__block {
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+            margin-right: auto !important;
+            margin-left: auto !important;
+        }
+        &__special-right-padding {
+            padding-right: 15px;
+        }
+        &__text {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 20px;
+        }
+    }
 }
