@@ -75,8 +75,6 @@
   </div>
 </footer>
 
-
-<script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/jquery.min.js"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/vendor.js"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/main.js"></script>
 

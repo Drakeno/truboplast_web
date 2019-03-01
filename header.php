@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/dist/styles/main.css" type="text/css" />
 
   <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/vendor/modernizr.js"></script>
+  <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/jquery.min.js"></script>
+  <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/jquery-utils.js"></script>
 </head>
 
 <body>
