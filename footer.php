@@ -1,64 +1,78 @@
-<?CScorp::checkRestartBuffer();?>
-<?IncludeTemplateLangFile(__FILE__);?>
-
-
+</div>
+</main>
 <footer class="footer">
-    <div class="container">
-        <div class="row footer__wrap">
-            <div class="col-md-5">
-                <ul class="footer__menu hidden-xs hidden-sm">
-                    <li><a href="#">Каталог</a></li>
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Производство</a></li>
-                    <li><a href="#">Акции</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="col-md-7 footer__special-right-padding">
-                <div class="footer__contacts">
-                    <div class="footer__block">
-                        <div class="phone-footer">
-                            <p class="phone-footer__hint">Офис</p>
-                            <a class="phone-footer__link" href="tel:+78432334439">8 (843) 233-44-39</a>
-                        </div>
-                        <p class="footer__text hidden-xs">
-                            Адрес:<br>
-                            420054,Татарстан, г. Казань, ул. Ямашева,<br>
-                            д.35а
-                        </p>
-                    </div>
-                    <div class="footer__block">
-                        <div class="phone-footer">
-                            <p class="phone-footer__hint">Производство</p>
-                            <a class="phone-footer__link" href="tel:+78007007080">8 (800) 700-70-80</a>
-                        </div>
-                        <p class="footer__text hidden-xs">
-                            Адрес:<br>
-                            422527, г.Казань, ул.Автосервисная,<br>
-                            дом 25А
-                        </p>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <div class="row footer__wrap">
+      <div class="col-md-5">
+        <?$APPLICATION->IncludeComponent(
+            "bitrix:menu", 
+            "footer-menu", 
+            array(
+                "COMPONENT_TEMPLATE" => "footer-menu",
+                "ROOT_MENU_TYPE" => "bottom",
+                "MENU_CACHE_TYPE" => "A",
+                "MENU_CACHE_TIME" => "3600",
+                "MENU_CACHE_USE_GROUPS" => "Y",
+                "MENU_CACHE_GET_VARS" => array(
+                ),
+                "MAX_LEVEL" => "2",
+                "CHILD_MENU_TYPE" => "left",
+                "USE_EXT" => "N",
+                "DELAY" => "N",
+                "ALLOW_MULTI_SELECT" => "N"
+            ),
+            false
+        );?>
+      </div>
+      <div class="col-md-7 footer__special-right-padding">
+        <div class="footer__contacts">
+          <div class="footer__block">
+            <? $APPLICATION->IncludeFile(SITE_DIR."local/include/footer/office-contacts.php", Array(), Array(
+                            "MODE" => "html",
+                            "NAME" => "Контакты офис",
+                        )); ?>
+          </div>
+          <div class="footer__block">
+            <? $APPLICATION->IncludeFile(SITE_DIR."local/include/footer/production-contacts.php", Array(), Array(
+                            "MODE" => "html",
+                            "NAME" => "Контакты производство",
+                        )); ?>
+          </div>
         </div>
-
-        <div class="row footer__lastrow hidden-xs hidden-sm">
-            <div class="col-md-7">
-                <p class="footer__text">© 2019 Группа компаний Трубопласт</p>
-            </div>
-            <div class="col-md-5">
-                <div class="text-right">
-                    <a href="/8" class="footer__text footer__text--link">Политика конфиденциальности</a>
-                </div>
-            </div>
-        </div>
-        <div class="row visible-xs visible-sm">
-            <div class="text-center">
-                <a href="/8" class="footer__text footer__text--link">Политика конфиденциальности</a>
-                <p class="footer__text">© 2019 Группа компаний Трубопласт</p>
-            </div>
-        </div>
+      </div>
     </div>
+
+    <div class="row footer__lastrow hidden-xs hidden-sm">
+      <div class="col-md-7">
+        <? $APPLICATION->IncludeFile(SITE_DIR."local/include/footer/copyright.php", Array(), Array(
+                            "MODE" => "php",
+                            "NAME" => "Копирайт",
+        )); ?>
+      </div>
+      <div class="col-md-5">
+        <div class="text-right">
+          <? $APPLICATION->IncludeFile(SITE_DIR."local/include/footer/confidential.php", Array(), Array(
+                            "MODE" => "html",
+                            "NAME" => "Политика конфиденциальности",
+          )); ?>
+        </div>
+      </div>
+    </div>
+    <div class="row visible-xs visible-sm">
+      <div class="text-center">
+        <? $APPLICATION->IncludeFile(SITE_DIR."local/include/footer/confidential.php", Array(), Array(
+                            "MODE" => "html",
+                            "NAME" => "Политика конфиденциальности",
+          )); ?>
+        <p class="footer__text">
+          <? $APPLICATION->IncludeFile(SITE_DIR."local/include/footer/copyright.php", Array(), Array(
+                            "MODE" => "php",
+                            "NAME" => "Копирайт",
+          )); ?>
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
 
