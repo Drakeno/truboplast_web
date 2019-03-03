@@ -64,18 +64,17 @@
                             "MODE" => "html",
                             "NAME" => "Политика конфиденциальности",
           )); ?>
-        <p class="footer__text">
           <? $APPLICATION->IncludeFile(SITE_DIR."local/include/footer/copyright.php", Array(), Array(
                             "MODE" => "php",
                             "NAME" => "Копирайт",
           )); ?>
-        </p>
       </div>
     </div>
   </div>
 </footer>
 
 <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/vendor.js"></script>
+<script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/swiper.min.js"></script>
 <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/main.js"></script>
 
 <?// Образцовый инклуд:

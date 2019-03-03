@@ -21,13 +21,16 @@
     }
     .inl-form {
         margin-top: 46px;
+        .for-ie {
+            display: none;
+        }
         &__group {
             margin-bottom: 23px;
         }
         &__input {
             border: none;
             min-width: 320px;
-            margin-right: 26px;
+            margin-right: 20px;
             padding: 25px;
             height: 75px;
             font-size: 18px;
@@ -105,6 +108,9 @@
     .red-form {
         padding-top: 18px;
         padding-bottom: 38px;
+        .big-btn {
+            width: 100%;
+        }
         &__title {
             font-size: 24px;
             line-height: normal;
@@ -148,6 +154,24 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.bx-ie8,
+.bx-ie9 {
+    .inl-form {
+        &__input {
+            margin-right: 5px;
+        }
+
+        .for-ie {
+            position: absolute;
+            color: #000;
+            display: inline-block;
+            width: 320px;
+            margin-bottom: 0;
+            margin-top: 20px;
         }
     }
 }

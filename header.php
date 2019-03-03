@@ -1,6 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();?>
 <!DOCTYPE html>
-<html
+<html lang="ru"
   class="<?=($_SESSION['SESS_INCLUDE_AREAS'] ? 'bx_editmode ' : '')?><?=strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE 7.0' ) ? 'ie ie7' : ''?> <?=strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE 8.0' ) ? 'ie ie8' : ''?> <?=strpos( $_SERVER['HTTP_USER_AGENT'], 'MSIE 7.0' ) ? 'ie ie9' : ''?>">
 
 <head>
@@ -17,17 +17,27 @@
   <link rel="apple-touch-icon" sizes="57x57" href="<?=SITE_TEMPLATE_PATH?>/dist/apple-icon-57x57.png">
   <link rel="icon" type="image/png" sizes="32x32" href="<?=SITE_TEMPLATE_PATH?>/dist/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?=SITE_TEMPLATE_PATH?>/dist/favicon-16x16.png">
-  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="shortcut icon" href="<?$_SERVER[" DOCUMENT_ROOT"]?>/favicon.ico">
 
   <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/dist/styles/core.css" type="text/css" />
   <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/dist/styles/main.css" type="text/css" />
 
+  <!--[if IE 8 ]>
+      <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/ie-fix/html5shiv.js"></script>
+  <![endif]-->
+
   <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/vendor/modernizr.js"></script>
+  <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/vendor/respond.js"></script>
   <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/jquery.min.js"></script>
   <script src="<?=SITE_TEMPLATE_PATH?>/dist/scripts/jquery-utils.js"></script>
+
 </head>
 
 <body>
+  <!--[if IE]>
+      <p class="browserupgrade">Вы используете <strong>устаревший</strong> браузер. Пожалуйста, <a href="https://browsehappy.com/?locale=ru">обновите его</a> для корректного отображения сайта.</p>
+    <![endif]-->
+
   <?CAjax::Init();?>
   <div id="panel">
     <?$APPLICATION->ShowPanel();?>
@@ -41,11 +51,12 @@
   <?die();?>
   <?endif;?>
   <?CScorp::SetJSOptions();?>
-  <?global $arSite, $isIndex, $isAbout, $is404;?>
+  <?global $arSite, $isIndex, $isAbout, $isContact, $is404;?>
   <?$is404 = defined("ERROR_404") && ERROR_404 === "Y"?>
   <?$arSite = CSite::GetByID(SITE_ID)->Fetch();?>
   <?$isIndex = CSite::inDir(SITE_DIR."index.php")?>
   <?$isAbout = CSite::inDir(SITE_DIR."local/about-company/index.php")?>
+  <?$isContact = CSite::inDir(SITE_DIR."local/contact/index.php")?>
 
   <header class="header">
     <div class="container-fluid">
@@ -63,7 +74,7 @@
               class="img-responsive" alt="Логотип"></a>
           <a class="navigation__logo-sm hidden-lg" href="/"><img src="<?=SITE_TEMPLATE_PATH?>/dist/images/logo-sm.png"
               class="img-responsive" alt="Логотип"></a>
-            <? $APPLICATION->IncludeFile(SITE_DIR."local/include/header/phone-and-hint-mobile.php", Array(), Array(
+          <? $APPLICATION->IncludeFile(SITE_DIR."local/include/header/phone-and-hint-mobile.php", Array(), Array(
               "MODE" => "html",
               "NAME" => "Телефон и подсказка",
             )); ?>
@@ -71,7 +82,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navigation__content" id="bs-navbar-collapse">
-        <?$APPLICATION->IncludeComponent(
+          <?$APPLICATION->IncludeComponent(
           "bitrix:menu",
           "main-menu",
           Array(
@@ -93,15 +104,7 @@
     </div>
   </header>
 
-  <? if ($isIndex) {?>
-
-  <? require_once($_SERVER["DOCUMENT_ROOT"]."/local/include/indexblocks.php"); ?>
- 
-  <? } else if ($isAbout) { ?>
-
-  <? require_once($_SERVER["DOCUMENT_ROOT"]."/local/include/aboutus.php"); ?>
- <div>
-  <? } else { ?>
+  <? if(!$isIndex && !$isAbout && !$isContact) { ?>
   <main class="page-content">
     <div class="page-content__top big-head">
       <div class="container">
@@ -125,6 +128,17 @@
         </div>
       </div>
     </div>
-
     <div class="container">
-    <? }  ?>
+
+      <? } else if ($isIndex) {?>
+
+      <? require_once($_SERVER["DOCUMENT_ROOT"]."/local/include/indexblocks.php"); ?>
+
+      <? } else if ($isAbout) { ?>
+
+      <? require_once($_SERVER["DOCUMENT_ROOT"]."/local/include/aboutus.php"); ?>
+
+      <? } else if ($isContact) { ?>
+        <? require_once($_SERVER["DOCUMENT_ROOT"]."/local/include/contact.php"); ?>
+
+      <? }  ?>

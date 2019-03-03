@@ -76,3 +76,10 @@
         }
     }
 }
+
+.bx-ie8,
+.bx-ie9 {
+  .fnavigation {
+    display: none;
+  }
+}
