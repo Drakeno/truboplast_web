@@ -41,10 +41,11 @@
   <?die();?>
   <?endif;?>
   <?CScorp::SetJSOptions();?>
-  <?global $arSite, $isIndex, $is404;?>
-  <?$isIndex = CSite::inDir(SITE_DIR."index.php")?>
+  <?global $arSite, $isIndex, $isAbout, $is404;?>
   <?$is404 = defined("ERROR_404") && ERROR_404 === "Y"?>
   <?$arSite = CSite::GetByID(SITE_ID)->Fetch();?>
+  <?$isIndex = CSite::inDir(SITE_DIR."index.php")?>
+  <?$isAbout = CSite::inDir(SITE_DIR."local/about-company/index.php")?>
 
   <header class="header">
     <div class="container-fluid">
@@ -95,7 +96,11 @@
   <? if ($isIndex) {?>
 
   <? require_once($_SERVER["DOCUMENT_ROOT"]."/local/include/indexblocks.php"); ?>
+ 
+  <? } else if ($isAbout) { ?>
 
+  <? require_once($_SERVER["DOCUMENT_ROOT"]."/local/include/aboutus.php"); ?>
+ <div>
   <? } else { ?>
   <main class="page-content">
     <div class="page-content__top big-head">
