@@ -13,7 +13,7 @@
     }
     &__hint {
         margin-bottom: 17px;
-        font-family: 'Open Sans';
+        font-family: 'Open Sans', sans-serif !important;
         line-height: normal;
         font-weight: bold;
         font-size: 16px;
@@ -44,14 +44,14 @@
     }
     &__name {
         margin-bottom: 4px;
-        font-family: 'Open Sans';
+        font-family: 'Open Sans', sans-serif !important;
         letter-spacing: 0;
         line-height: 27px;
         font-size: 20px;
         color: #000000;
     }
     &__position {
-        font-family: 'Open Sans';
+        font-family: 'Open Sans', sans-serif !important;
         letter-spacing: 0;
         font-style: italic;
         font-weight: normal;
@@ -60,7 +60,7 @@
         color: #000000;
     }
     &__data {
-        font-family: 'Open Sans';
+        font-family: 'Open Sans', sans-serif !important;
         margin-top: 10px;
         letter-spacing: 0;
         line-height: 24px;
