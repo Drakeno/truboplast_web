@@ -87,7 +87,7 @@
 
 						</li>
 						<li class="navigation__largebtn">
-							<a class="big-btn big-btn--blue" href="#">Заказать</a>
+							<a class="big-btn big-btn--blue" onclick="openModalForm();">Заказать</a>
 						</li>
 						<!-- <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b
@@ -992,10 +992,10 @@
 		</div>
 	</footer>
 
-	<div class="modalform fade in" id="modalform" role="dialog">
+	<div class="modalform" id="modalform" role="dialog" style="display:none;">
 		<div class="modalform__wrapper">
-			<div class="modalform__window">
-				<button class="btn modalform__close">&times;</button>
+			<div class="modalform__window" id="modalformWindow" style="display:none;">
+				<button class="btn modalform__close" onclick="closeModalForm();">&times;</button>
 				<h4 class="modalform__title">Оформить заказ</h4>
 				<p class="modalform__hint read-text">Напишите свое имя и номер телефона. Мы свяжемся с вами и уточним детали.</p>
 				<form action="" class="modalform__content">
@@ -1016,6 +1016,22 @@
 			</div>
 		</div>
 	</div>
+
+	<script>
+	var closeModalForm = function () {
+		$("#modalform").hide();
+		$("#modalformWindow").fadeOut(200);
+	}
+
+	var openModalForm = function() {
+		$("#modalform").show(100);
+		$("#modalformWindow").fadeIn(300);
+	}
+
+	$(".modalform__wrapper").click(function() {
+		closeModalForm();
+	})
+	</script>
 
 	<!-- build:js scripts/jquery.min.js -->
 	<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
