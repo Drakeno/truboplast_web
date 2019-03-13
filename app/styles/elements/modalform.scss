@@ -18,7 +18,7 @@
     margin-right: auto;
     margin-top: 10%;
     max-width: 660px;
-    padding: 50px 100px;
+    padding: 50px 90px;
     background: #ffffff;
     width: 100%;
     box-shadow: 0px 15px 43px rgba(21, 21, 0, 0.0896456);
@@ -26,13 +26,15 @@
   &__close {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -8px;
     color: #000000;
     background: transparent;
-    width: 50px;
-    height: 50px;
+    width: 75px;
+    height: 75px;
+    font-size: 62px;
   }
   &__title {
+    margin-bottom: 20px;
     text-transform: uppercase;
     font-size: 36px;
     letter-spacing: 1px;
@@ -41,13 +43,16 @@
   }
   &__hint {
     font-size: 18px;
+    line-height: 25px;
     text-align: center;
   }
   &__input {
-    padding: 20px 40px;
+    padding: 35px 40px;
+    margin-bottom: 33px;
     border: 1px solid transparent;
     background: #E7EFFD;
     border-radius: 0;
+    font-size: 18px;
     &::placeholder {
       font-size: 18px;
       color: #3A3F49;
@@ -62,10 +67,13 @@
   }
   &__button {
     width: 100%;
-    margin: 10px 0;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
   &__label {
     font-size: 12px;
+    font-weight: normal;
     color: rgba(#B2B9C6, 0.63);
   }
   &__checkbox {
@@ -80,8 +88,8 @@
         &:before {
           content: '';
           position: absolute;
-          left: -8px;
-          top: -1px;
+          left: -15px;
+          top: 9px;
           width: 20px;
           height: 20px;
           background: $blend;
@@ -90,8 +98,8 @@
           content: '\2713';
           position: absolute;
           font-size: 30px;
-          top: -15px;
-          left: -8px;
+          top: -6px;
+          left: -14px;
           color: $black;
           transition: all .2s;
         }
@@ -105,6 +113,53 @@
     &:checked+label:after {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+  &__content {
+    margin-top: 30px;
+  }
+  &__agree-block {
+    padding-left: 20px;
+  }
+  .for-ie {
+    display: none;
+  }
+}
+
+.bx-ie8,
+.bx-ie9 {
+  .modalform {
+    .for-ie {
+      margin-top: 10px;
+      display: block;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+  .modalform {
+    &__window {
+      padding: 20px;
+    }
+
+    &__title {
+      font-size: 25px;
+    }
+
+    &__close {
+      top: -15px;
+      opacity: 0.5;
+      right: 0px;
+      padding: 0;
+      width: 50px;
+      height: 50px;
+      font-size: 50px;
+    }
+
+    &__input {
+      padding: 30px;
+      margin-bottom: 10px;
     }
   }
 }
