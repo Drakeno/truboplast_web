@@ -65,9 +65,19 @@
     display: none !important;
 }
 
+.modalform__wrapper {
+    .success-check {
+        margin-top: 30px;
+        img {
+            left: 19px;
+            top: 2px;
+        }
+    }
+}
+
 @media (max-width: 1100px) {
     .success-hint {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
     .success-big-title {
         margin-left: 0;
@@ -96,5 +106,3 @@
         font-size: 14px;
     }
 }
-
-@media(min-width: 768px) {}

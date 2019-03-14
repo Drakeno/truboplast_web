@@ -104,6 +104,11 @@
     </div>
   </header>
 
+  <? $APPLICATION->IncludeFile(SITE_DIR."local/include/header/modalform.php", Array(), Array(
+                            "MODE" => "php",
+                            "NAME" => "Форма",
+  )); ?>
+
   <? if(!$isIndex && !$isAbout && !$isContact) { ?>
   <main class="page-content">
     <div class="page-content__top big-head">

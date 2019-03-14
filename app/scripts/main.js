@@ -47,4 +47,14 @@ $(document).ready(function () {
       },
     }
   });
+
+  // Close modal on wrapper click (not on modal or btn)
+  $(document).click(function (event) {
+    if (!$(event.target).closest(".modalform__window, .big-btn").length) {
+      closeModalForm();
+    }
+  });
+
+  // mask all phones in forms
+  $('input[type=tel]').inputmask("8 (999) 999 9999");
 });
