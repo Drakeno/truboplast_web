@@ -13,10 +13,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <?$APPLICATION->ShowHead()?>
 
-
-  <link rel="apple-touch-icon" sizes="57x57" href="<?=SITE_TEMPLATE_PATH?>/dist/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="<?=SITE_TEMPLATE_PATH?>/dist/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="<?=SITE_TEMPLATE_PATH?>/dist/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?=SITE_TEMPLATE_PATH?>/dist/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" href="<?$_SERVER[" DOCUMENT_ROOT"]?>/favicon.ico">
 
   <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/dist/styles/core.css" type="text/css" />
