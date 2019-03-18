@@ -29,6 +29,7 @@
         }
         &__input {
             border: none;
+            border-radius: 0;
             min-width: 320px;
             margin-right: 20px;
             padding: 25px;
@@ -122,6 +123,7 @@
         }
         .inl-form {
             &__input {
+                border-radius: 0;
                 min-width: 100%;
                 width: 100%;
                 margin-bottom: 11px;

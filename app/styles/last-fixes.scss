@@ -1,21 +1,4 @@
 @import 'core/extra';
-.page-content {
-    &__pagination {
-        ul {
-            >li {
-                display: inline-block
-            }
-            >li+li:before {
-                padding: 0 5px;
-                content: "/\00a0"
-            }
-        }
-    }
-}
-
-.red-form {
-    min-height: 497px;
-}
 
 .form-header {
     position: absolute;
@@ -73,6 +56,15 @@
             top: 2px;
         }
     }
+
+    @media (max-width: 1100px) {
+        .success-check {
+            margin-top: 0;
+            img {
+                padding-right: 10px;
+            }
+        }
+      }
 }
 
 @media (max-width: 1100px) {

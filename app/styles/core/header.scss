@@ -28,7 +28,7 @@
                 border-bottom: 4px solid transparent;
                 transition: .1s all;
                 &:hover {
-                    background: #F8F9FA !important;
+                    background: #fff !important;
                     color: $dark !important;
                     border-color: $lightblue;
                 }
@@ -37,7 +37,7 @@
                 }
             }
             &:hover {
-                background: #F8F9FA !important;
+                background: #fff!important;
                 .dropdown-menu {
                     transition: .2s all;
                     display: block;
@@ -45,7 +45,7 @@
                     left: -16px;
                     top: 100%;
                     border-color: transparent;
-                    background: #F8F9FA;
+                    background: #Fff;
                     border-radius: 0;
                     li>a {
                         text-transform: uppercase;
@@ -53,7 +53,7 @@
                         padding: 30px 15px;
                         box-sizing: border-box;
                         letter-spacing: 0;
-                        background: #F8F9FA;
+                        background: #Fff;
                         white-space: pre-wrap;
                         &:hover {
                             color: $blue;
