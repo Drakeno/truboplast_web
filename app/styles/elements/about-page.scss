@@ -26,6 +26,17 @@
             max-width: 180px;
         }
     }
+    &__pagination {
+        ul {
+            >li {
+                display: inline-block
+            }
+            >li+li:before {
+                padding: 0 5px;
+                content: "/\00a0"
+            }
+        }
+    }
     &__production {}
     &__map {}
 }
