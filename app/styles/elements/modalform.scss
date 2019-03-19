@@ -56,6 +56,11 @@
     text-align: center;
   }
   &__input {
+    width: 100%;
+    display: block;
+    color: #000;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+
     padding: 35px 40px;
     margin-bottom: 33px;
     border: 1px solid transparent;
@@ -145,9 +150,11 @@
   }
 }
 
+.bx-ie,
 .bx-ie8,
 .bx-ie9 {
-  .modalform {
+  .modalform,
+  .modalform__content {
     .for-ie {
       margin-top: 10px;
       display: block;
@@ -175,6 +182,7 @@
     &__input {
       padding: 30px;
       margin-bottom: 10px;
+      height: 34px;
     }
   }
 }
