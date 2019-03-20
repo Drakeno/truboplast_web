@@ -14,13 +14,12 @@
     float: left;
     padding: 27px 40px;
     margin-bottom: 10px;
-    border-top: 10px solid $blue;
+    border-top: 7.5px solid $blue;
     min-height: 194px;
     box-shadow: 0px 15px 43px rgba(21, 21, 0, 0.0896456);
     width: 40%;
     box-sizing: border-box;
     &--page {
-      border-top: 8px solid $blue;
       padding: 32px 40px;
       width: 45%;
       width: calc(50% - 20px);
@@ -109,7 +108,6 @@
         min-height: 398px;
         margin-right: 20px;
         width: calc(60% - 20px);
-        border-top: 7px solid $blue;
         .news-block__bottom {
           position: absolute;
           bottom: 20px;
