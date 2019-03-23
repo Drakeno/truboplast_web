@@ -57,8 +57,8 @@
   <?$is404 = defined("ERROR_404") && ERROR_404 === "Y"?>
   <?$arSite = CSite::GetByID(SITE_ID)->Fetch();?>
   <?$isIndex = CSite::inDir(SITE_DIR."index.php")?>
-  <?$isAbout = CSite::inDir(SITE_DIR."local/about-company/index.php")?>
-  <?$isContact = CSite::inDir(SITE_DIR."local/contact/index.php")?>
+  <?$isAbout = CSite::inDir(SITE_DIR."about-company/index.php")?>
+  <?$isContact = CSite::inDir(SITE_DIR."contact/index.php")?>
 
   <header class="header">
     <div class="container-fluid">
